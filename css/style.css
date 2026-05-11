@@ -169,3 +169,14 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+/* -- Expertize Section -- */
+
+.expertize-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.expertize-items img{
+    width: 80%;
+}
