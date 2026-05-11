@@ -48,6 +48,14 @@ a{
     background: #f79443;
     color: var(--white-color);
 }
+.heading-bx{
+    text-align: center;
+}
+
+.heading-bx h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
 
 /* --- reusable Code --- */
 .sec-padding{
@@ -178,5 +186,138 @@ header{
     justify-content: center;
 }
 .expertize-items img{
-    width: 80%;
+    width: 60%;
 }
+.cards{
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(180deg, #fbf7ff, #f9f8fc 45.31%, #f5f2f9);
+}
+.cards::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 170px;
+    background-image: url(../img/circle-shape1.svg);
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+.card-img{
+    margin-bottom: 1rem;
+}
+.cards h6{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.choose-us-sec .heading-bx h2{
+    margin-bottom: 3rem;
+}
+
+/* -- Counter Section -- */
+.counter-sec{
+    background-image:linear-gradient(235deg, rgba(255,255,255,0) 8%, rgba(89, 32, 197, 0.35) 30%,
+  rgba(92, 86, 119, 0.18) 52%, rgba(255,255,255,0) 75%, rgba(238, 187, 238, 0.671) 100%);
+}
+
+.counter-content{
+    text-align: center;
+    box-shadow: 0 0 20px #ebebeb;
+    border: 1px solid #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.counter-content h6{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--bg-purple-shade2);
+}
+.counter-content p{
+    font-size: 1.1rem;
+}
+
+/* --- FAQ's Section ---  */
+
+.accordian-content {
+	max-width: 500px;
+}
+.accordian {
+	margin-bottom: 1.5rem;
+	max-width: 800px;
+	margin: 0 auto 1.5rem;
+}
+
+.accordian .contentBx .label {
+	position: relative;
+	padding: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: var(--font-colour);
+	font-weight: 600;
+	transition: 0.3s;
+	font-size: 1.2rem;
+}
+
+.accordian .contentBx.active .label {
+    color: #fff;
+    background:var(--bg-purple-shade2);
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+.ques-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 0.5rem;
+	background-color: var(--color-brown);
+	color: var(--color-white);
+}
+
+.accordian .contentBx .label::before {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 1.2rem;
+	color: var(--font-colour);
+	font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.accordian .contentBx.active .label::before {
+	content: '-';
+	color: #fff;
+}
+
+.accordian .contentBx {
+	position: relative;
+	border-radius: 0.5rem;
+	box-shadow: 0 0px 5px #c1bebe;
+}
+
+.accordian .contentBx .acc-content {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+.accordian .contentBx.active .acc-content {
+	height: inherit;
+	padding: 1.5rem 1rem;
+}
+
+.accordian .contentBx .acc-content p{
+	margin: 0;
+}
+
+
