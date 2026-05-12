@@ -7,6 +7,7 @@
     --bg-purple-shade2:#5920c5;
     --bg-purple-shade3:#5c5677;
     --btn-hover-color: #f79443;
+    --white-shade2:#c5c5c5;
 
 
     --transition:0.3s ease-in-out;
@@ -452,7 +453,7 @@ header{
     justify-content: center;
     gap:1rem;
     animation: spin 40s linear infinite;
-    padding: 2rem 1rem 2rem 0;
+    padding: 1rem 1rem 1rem 0;
 }
 .carousel:hover .group {
   animation-play-state: paused;
@@ -622,6 +623,7 @@ header{
     padding: 2rem;
     box-shadow: 0 0 20px #ebebeb;
     background: linear-gradient(180deg, #fbf7ff, #f9f8fc 45.31%, #f5f2f9);
+    z-index: 1;
 }
 
 .step-number{
@@ -637,11 +639,105 @@ header{
     min-width: 50px;
     font-weight:bold;
     color: #5c5677;
+    z-index: 3;
 }
 .process-sec .heading-bx{
     margin-bottom: 7rem;
 }
+.step-box:hover{
+    background: rgba(89, 32, 197, 0.722);
+    color: var(--white-color);    
+}
 .step-box:hover .step-number{
-    background: var(--bg-purple-shade2);
+    color: rgba(89, 32, 197, 0.722);
+    /* color: var(--white-color); */
+}
+
+/* --- Footer --- */
+.footer-sec{
+    background: var(--bg-color1);
+    padding-top: 5rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.links li a{
+    color: var(--white-color);
+    transition: var(--transition);
+}
+.links li a:hover{
+    color: var(--btn-hover-color);
+    letter-spacing: 0.02rem;
+}
+
+.links-group .fsz-18{
+    font-size: 25px;
+}
+
+.links-group h6{
+    color: var(--white-shade2);
+}
+
+.foot{
+    border-top: 1px solid;
+    border-color: var(--white-shade2);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.copy-right{
+    color: var(--white-shade2);
+}
+.cr-dark1{
+    color: var(--btn-hover-color);
+}
+.cr-dark1:hover{
+    color: var(--bg-purple-shade2);
+}
+.foot-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+} 
+.foot-links a{
+    color: var(--white-shade2);
+}
+
+
+/* --- Tools Section --- */
+.tool-sec{
+    background: var(--bg-color1);
+}
+.tool-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.tool-sec .heading-bx h2{
+    color: var(--white-color);
+}
+.tool-sec .heading-bx p{
+    color: var(--white-shade2);
+}
+.tool-box{
+    background: #1c143a;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 0 10px #fff;
+}
+.tool-box:hover{
+    box-shadow: 0 0 20px #fff;
+}
+
+.tool-box h3{
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+.tool-box p{
     color: var(--white-color);
 }
