@@ -12,23 +12,28 @@
     <link rel="stylesheet" href="css/media.css"/>    
 </head>
 <body>
+
     <header>
         <div class="container">
             <div class="nav-container">
                 <div class="nav-links-bx">
-                    <div class="logo">Logo</div>
-                    <div class="navlinks">
+                    <div class="logo-bx">
+                       <a href="#" class="logo"> Compare360 </a>
+                     </div>
+                    <!-- <div class="navlinks">
                         <ul>
                             <li><a href="#">Life</a></li>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Auto</a></li>
                             <li><a href="#">Disability</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="other-nav-link">
                     <ul>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="#">Services</a></li>
                         <li><a href="#">Sign in</a></li>
                         <li><a href="#" class="get-quote">Get a Quote <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                     </ul>
@@ -42,17 +47,66 @@
         <div class="container">
             <div class="row">
                 <div class="hero-content-bx col-lg-7">
-                    <h1 class="hero-title">
-                        <span> Let's find you <br>  the </span> Best Insurance.
-                    </h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci neque dicta, delectus nostrum voluptates ipsum facere suscipit.</p>
-                    <!-- <a href="#" class="get-quote">Get a Quote <span><i class="fa-solid fa-angle-right"></i></span></a> -->
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Compare <span>  Insurance </span> & Home Services in One Platform
+                        </h1>
+                    <p>Get instant insurance quotes, compare home improvement services, and connect with trusted professionals using our AI-powered comparison platform.</p>
+                    <div class="hero-btn">
+                        <div class="row">
+                            <div class="quotes-btn col-lg-3 me-5">
+                                <a href="#" class="get-quote">Get Free Quotes</a>
+                            </div>
+                            <div class="explore-btn col-lg-3">
+                                <a href="#" class="get-quote">Explore Services </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="hero-slider col-lg-5">
-                    <div class="slider-bx">SLIDER</div>
+                <div class="hero-form col-lg-5">
+                    <div class="form-bx">
+                        <div class="quote-card" id="quote">
+                            <h3>Instant Quote Form</h3>
+
+                            <form>
+                                <div class="form-group">
+                                    <select>
+                                        <option>Select Category</option>
+                                        <option>Life Insurance</option>
+                                        <option>Health Insurance</option>
+                                        <option>Auto Insurance</option>
+                                        <option>Roofing</option>
+                                        <option>HVAC</option>
+                                        <option>Solar</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Full Name">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email Address">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Zip Code">
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea rows="4" placeholder="Tell us about your project or coverage needs"></textarea>
+                                </div>
+
+                                <button class="btn primary-btn submit-btn">
+                                    Compare Quotes Now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="insurance-type mt-5">
+            <!-- <div class="insurance-type mt-5">
                 <div class="insurance-type-title">
                     What can we help <br> you find?
                 </div>
@@ -65,12 +119,140 @@
                 <div class="insurance-type-bnt">
                     <a href="#" class="get-quote">Get a Quote <span><i class="fa-solid fa-angle-right"></i></span></a>
                 </div>           
-            </div>
+            </div> -->
         </div>    
     </section>
 
+    <!-- CATEGORY TABS SECTION -->
+    <section class="compare-category-section sec-padding">
+        <div class="container">
+            <div class="heading-bx">
+                <h2>Explore Comparison Categories</h2>
+                <p>
+                    Compare insurance plans and home improvement services
+                    from trusted providers in one smart platform.
+                </p>
+            </div>
+
+        <!-- TAB BUTTONS -->
+
+        <div class="compare-tabs">
+            <button class="tab-btn active" data-tab="life-tab">
+                Life Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="health-tab">
+                Health Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="auto-tab">
+                Auto Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="home-tab">
+                Home & Travel
+            </button>
+        </div>
+
+
+        <!-- Life Insurance TAB -->
+        
+        <div class="tab-content active" id="life-tab">   
+            <div class="srvc-main-container">
+                <div class="service-card">
+                    <div class="srv-content-bx">
+                        <h3>Life Insurance</h3>
+                        <p>
+                            Smart life protection plans with AI-powered recommendations.
+                        </p>
+                        <ul>
+                            <li>Term Life Insurance</li>
+                            <li>Whole Life Insurance</li>
+                            <li>Universal Life Insurance</li>
+                            <li>No Medical Exam Plans</li>
+                            <li>Life Insurance Calculator</li>
+                        </ul>
+                        <div class="quotes-btn">
+                            <a href="#" class="get-quote">Get Free Quotes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Health Insurance TAB -->
+
+        <div class="tab-content" id="health-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Health Insurance</h3>
+                    <p>
+                        Compare affordable health plans from trusted carriers.
+                    </p>
+                    <ul>
+                        <li>Individual Health Plans</li>
+                        <li>Family Coverage</li>
+                        <li>Dental & Vision</li>
+                        <li>Critical Illness Plans</li>
+                        <li>Compare Health Quotes</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Auto Insurance TAB -->
+         <div class="tab-content" id="auto-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Auto Insurance</h3>
+                    <p>
+                        Get car, EV, and motorcycle insurance in minutes.
+                    </p>
+                    <ul>
+                        <li>Car Insurance Quotes</li>
+                        <li>Motorcycle Insurance</li>
+                        <li>EV Insurance</li>
+                        <li>Compare Auto Coverage</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home & Travel Tab -->
+
+        <div class="tab-content" id="home-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Home & Travel</h3>
+                    <p>
+                        Protect your property and travel with customized coverage.
+                    </p>
+                    <ul>
+                        <li>Homeowners Insurance</li>
+                        <li>Renters Insurance</li>
+                        <li>International Travel Insurance</li>
+                        <li>Family Travel Coverage</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
     <!-- Expertize Section -->
-    <section class="expert-sec sec-padding">
+    <!-- <section class="expert-sec sec-padding">
         <div class="container">
             <div class="row">
                 <div class="expertize-items col-lg-3">
@@ -87,8 +269,54 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     
+    <!-- Process Section -->
+   <section class="process-sec sec-padding">
+        <div class="container">
+            <div class="heading-bx">
+                <h2>How It Works</h2>
+                <p>
+                    Compare providers, get personalized recommendations, and save more in just a few simple steps.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="step-items col-lg-4">
+                    <div class="step-box">
+                        <div class="step-number">01</div>
+                        <h3>Tell Us Your Needs</h3>
+                        <p>
+                            Select your insurance or home service category and provide project details.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-items col-lg-4">
+                    <div class="step-box">
+                        <div class="step-number">02</div>
+                        <h3>Compare Quotes</h3>
+                        <p>
+                            Instantly compare providers, pricing, coverage, and contractor options.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-items col-lg-4">
+                    <div class="step-box">
+                        <div class="step-number">03</div>
+                        <h3>Choose &amp; Save</h3>
+                        <p>
+                            Select the best option and connect directly with trusted providers.
+                        </p>
+                </div>
+                </div>
+            </div>
+
+        </div>
+  </section>
+
     <!-- Choose us Section -->
     <section class="choose-us-sec sec-padding">
         <div class="container">
@@ -180,114 +408,42 @@
         <div class="carousel">
             <div class="group">
                 <div class="test-card">
+                    <p>“The quote comparison process was incredibly fast. I found a better auto insurance policy and saved money instantly.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name">— Michael R.</div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
                 <div class="test-card">
+                    <p>“I used the platform for roofing quotes and got connected with trusted contractors within minutes.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name">— Sarah T.</div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
                 <div class="test-card">
+                    <p>“The AI recommendations made choosing health insurance much easier than other comparison sites.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name">— Daniel P.</div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
             </div>
             <div arial-hidden class="group">
                 <div class="test-card">
+                    <p>“The quote comparison process was incredibly fast. I found a better auto insurance policy and saved money instantly.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name"> — Michael R. </div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
                 <div class="test-card">
+                    <p>“I used the platform for roofing quotes and got connected with trusted contractors within minutes.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name"> — Sarah T. </div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
                 <div class="test-card">
+                    <p>“The AI recommendations made choosing health insurance much easier than other comparison sites.”</p>
                     <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
+                        <div class="client-name"> — Daniel P. </div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
-                </div>
-                <div class="test-card">
-                    <div class="test-content">
-                        <div class="test-img-bx">
-                            <img src="./img/testimg.avif" alt="">
-                        </div>
-                        <div class="client-name">Lorem</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, mollitia repudiandae. Iusto animi ullam mollitia odio sit nemo quo. Minus nostrum vitae aliquid facere aspernatur quasi eius assumenda doloremque corporis.</p>
                 </div>
             </div>
         </div>
