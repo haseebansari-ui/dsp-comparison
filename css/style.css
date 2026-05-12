@@ -112,6 +112,7 @@ header{
 .other-nav-link ul{
     display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 2rem;
 }
 .other-nav-link ul li a{
@@ -138,6 +139,27 @@ header{
     color: var(--white-color);
 }
 
+.drop-down-bx{
+    position: relative;
+}
+.other-nav-link ul li .drop-down-menue{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: auto;
+    width: 200px;
+    /* padding: 1rem 2rem; */
+    background: var(--white-color);
+    box-shadow: 0 0 20px #ebeb;
+    display:flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 0.8rem;
+    display: none;
+}
+.other-nav-link ul li .drop-down-menue li a{
+    color: var(--font-colour);
+}
 
 
 /* --- Hero section --- */
