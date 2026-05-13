@@ -1,1062 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compare360 - Insurance & Home Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#0f0a1f;
-      color:#fff;
-      line-height:1.6;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      max-width:100%;
-    }
-
-    .container{
-      width:min(1200px,90%);
-      margin:auto;
-    }
-
-    section{
-      padding:90px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:50px;
-    }
-
-    .section-title h2{
-      font-family:'Cuprum',sans-serif;
-      font-size:48px;
-      margin-bottom:12px;
-    }
-
-    .section-title p{
-      color:#c7c3d8;
-      max-width:700px;
-      margin:auto;
-    }
-
-    /* NAVBAR */
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(15,10,31,.92);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 0;
-    }
-
-    .logo{
-      font-size:32px;
-      font-family:'Cuprum',sans-serif;
-      font-weight:700;
-      color:#9d7bff;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:28px;
-    }
-
-    .nav-links a{
-      color:#f1efff;
-      transition:.3s;
-    }
-
-    .nav-links a:hover{
-      color:#9d7bff;
-    }
-
-    .menu-btn{
-      display:none;
-      font-size:30px;
-      cursor:pointer;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      background:
-      linear-gradient(60deg, rgba(255,255,255,0.12) 10%, rgba(255,255,255,0) 25%),
-      linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 90%),
-      radial-gradient(60% 55% at 55% 45%, rgba(89, 32, 197, 0) 0%, rgba(92, 86, 119, 0.28) 45%, rgba(89, 32, 197, 0.18) 65%, rgba(28, 17, 59, 0) 100%),
-      linear-gradient(235deg, rgba(255,255,255,0) 8%, rgba(89, 32, 197, 0.35) 30%, rgba(92, 86, 119, 0.18) 52%, rgba(255,255,255,0) 75%),
-      linear-gradient(225deg, rgba(255,255,255,0) 42%, rgba(126, 87, 255, 0.24) 63%, rgba(28, 17, 59, 0.4) 100%),
-      linear-gradient(135deg, #1c113b 0%, #2b1857 35%, #5920c5 70%, #5c5677 100%);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1fr 450px;
-      gap:60px;
-      align-items:center;
-    }
-
-    .hero-content h1{
-      font-family:'Cuprum',sans-serif;
-      font-size:72px;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
-
-    .hero-content h1 span{
-      color:#b89dff;
-    }
-
-    .hero-content p{
-      color:#ddd7ff;
-      margin-bottom:30px;
-      max-width:650px;
-      font-size:18px;
-    }
-
-    .hero-btns{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:15px 28px;
-      border-radius:14px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:600;
-      transition:.3s;
-    }
-
-    .primary-btn{
-      background:#8d5cff;
-    }
-
-    .primary-btn:hover{
-      background:#7440ef;
-      transform:translateY(-3px);
-    }
-
-    .secondary-btn{
-      border:1px solid rgba(255,255,255,.2);
-      background:rgba(255,255,255,.05);
-      backdrop-filter:blur(14px);
-    }
-
-    .quote-card{
-      background:rgba(255,255,255,.08);
-      backdrop-filter:blur(18px);
-      border:1px solid rgba(255,255,255,.1);
-      padding:35px;
-      border-radius:28px;
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
-    }
-
-    .quote-card h3{
-      font-size:28px;
-      margin-bottom:20px;
-    }
-
-    .form-group{
-      margin-bottom:18px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea{
-      width:100%;
-      padding:15px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.1);
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      outline:none;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder{
-      color:#d4d0e4;
-    }
-
-    .submit-btn{
-      width:100%;
-      border:none;
-      cursor:pointer;
-    }
-
-    /* SERVICES */
-
-    .card-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .service-card{
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      padding:30px;
-      transition:.4s;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .service-card:hover{
-      transform:translateY(-10px);
-      background:rgba(255,255,255,.08);
-    }
-
-    .service-card::before{
-      content:'';
-      position:absolute;
-      width:120px;
-      height:120px;
-      background:rgba(141,92,255,.18);
-      border-radius:50%;
-      top:-50px;
-      right:-50px;
-    }
-
-    .service-card h3{
-      margin-bottom:12px;
-      font-size:24px;
-    }
-
-    .service-card ul{
-      list-style:none;
-      margin-top:15px;
-    }
-
-    .service-card ul li{
-      margin-bottom:10px;
-      color:#d5d0e9;
-    }
-
-    /* HOW IT WORKS */
-
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .step-box{
-      background:#1a1235;
-      padding:40px 30px;
-      border-radius:24px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .step-number{
-      width:70px;
-      height:70px;
-      margin:auto auto 20px;
-      border-radius:50%;
-      background:#8d5cff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:28px;
-      font-weight:700;
-    }
-
-    /* WHY US */
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .why-card{
-      padding:30px;
-      border-radius:22px;
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .why-card h4{
-      font-size:22px;
-      margin-bottom:10px;
-    }
-
-    /* TOOLS */
-
-    .tools-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-    }
-
-    .tool-box{
-      background:#1c143a;
-      padding:28px;
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    /* REVIEWS */
-
-    .review-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:25px;
-    }
-
-    .review-card{
-      padding:35px;
-      border-radius:24px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .review-card h4{
-      margin-top:20px;
-    }
-
-    /* FAQ */
-
-    .faq-container{
-      max-width:900px;
-      margin:auto;
-    }
-
-    .faq-item{
-      margin-bottom:18px;
-      background:#1a1235;
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .faq-question{
-      padding:22px;
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-weight:600;
-    }
-
-    .faq-answer{
-      padding:0 22px;
-      max-height:0;
-      overflow:hidden;
-      transition:.4s;
-      color:#d4d0e4;
-    }
-
-    .faq-item.active .faq-answer{
-      padding:0 22px 22px;
-      max-height:200px;
-    }
-
-    /* CTA */
-
-    .cta{
-      text-align:center;
-      background:linear-gradient(135deg,#321b66,#5920c5);
-      border-radius:30px;
-      padding:70px 40px;
-    }
-
-    .cta h2{
-      font-size:52px;
-      margin-bottom:18px;
-      font-family:'Cuprum',sans-serif;
-    }
-
-    .cta p{
-      max-width:700px;
-      margin:auto auto 30px;
-      color:#e2ddff;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:80px 0 30px;
-      background:#090512;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:40px;
-      margin-bottom:50px;
-    }
-
-    .footer-box h3{
-      margin-bottom:20px;
-      font-size:24px;
-    }
-
-    .footer-box ul{
-      list-style:none;
-    }
-
-    .footer-box ul li{
-      margin-bottom:12px;
-      color:#beb7d7;
-    }
-
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding-top:20px;
-      text-align:center;
-      color:#a59fbe;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:992px){
-
-      .hero-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:54px;
-      }
-
-      .nav-links{
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#120c25;
-        flex-direction:column;
-        padding:30px;
-        display:none;
-      }
-
-      .nav-links.active{
-        display:flex;
-      }
-
-      .menu-btn{
-        display:block;
-      }
-    }
-
-    @media(max-width:768px){
-
-      .hero-content h1{
-        font-size:42px;
-      }
-
-      .section-title h2{
-        font-size:38px;
-      }
-
-      .cta h2{
-        font-size:40px;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>    
 </head>
 <body>
 
-  <!-- HEADER -->
-
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#" class="logo">Compare360</a>
-
-        <div class="nav-links" id="navLinks">
-          <a href="#insurance">Insurance</a>
-          <a href="#services">Home Services</a>
-          <a href="#tools">Calculators</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-links-bx">
+                    <div class="logo-bx">
+                       <a href="#" class="logo"> Compare360 </a>
+                     </div>
+                </div>
+                <div class="other-nav-link">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li class="drop-down-bx">
+                            <a href="#" class="drop-down-btn">Insurance <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <ul class="drop-down-menue">
+                                <li><a href="#">Life Insurance</a></li>
+                                <li><a href="#">Health Insurance</a></li>
+                                <li><a href="#">Auto Insurance</a></li>
+                                <li><a href="#">Home & Travel</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#" class="get-quote">Get a Quote <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <div class="menu-btn" id="menuBtn">☰</div>
-      </nav>
-    </div>
-  </header>
+<!-- =========================
+        ABOUT US PAGE
+========================= -->
 
-  <!-- HERO -->
+<section class="about-hero sec-padding">
 
-  <section class="hero">
-    <div class="container hero-grid">
-
-      <div class="hero-content">
-        <h1>
-          Compare <span>Insurance</span> & Home Services in One Platform
-        </h1>
-
-        <p>
-          Get instant insurance quotes, compare home improvement services,
-          and connect with trusted professionals using our AI-powered comparison platform.
-        </p>
-
-        <div class="hero-btns">
-          <a href="#quote" class="btn primary-btn">Get Free Quotes</a>
-          <a href="#services" class="btn secondary-btn">Explore Services</a>
-        </div>
-      </div>
-
-      <div class="quote-card" id="quote">
-        <h3>Instant Quote Form</h3>
-
-        <form>
-          <div class="form-group">
-            <select>
-              <option>Select Category</option>
-              <option>Life Insurance</option>
-              <option>Health Insurance</option>
-              <option>Auto Insurance</option>
-              <option>Roofing</option>
-              <option>HVAC</option>
-              <option>Solar</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <input type="text" placeholder="Full Name">
-          </div>
-
-          <div class="form-group">
-            <input type="email" placeholder="Email Address">
-          </div>
-
-          <div class="form-group">
-            <input type="text" placeholder="Zip Code">
-          </div>
-
-          <div class="form-group">
-            <textarea rows="4" placeholder="Tell us about your project or coverage needs"></textarea>
-          </div>
-
-          <button class="btn primary-btn submit-btn">
-            Compare Quotes Now
-          </button>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INSURANCE -->
-
-  <section id="insurance">
     <div class="container">
 
-      <div class="section-title">
-        <h2>Insurance Categories</h2>
-        <p>
-          Compare top-rated insurance providers and find the best policy for your lifestyle and budget.
-        </p>
-      </div>
+        <div class="about-hero-content">
 
-      <div class="card-grid">
+            <span class="mini-tag">
+                ABOUT OUR COMPANY
+            </span>
 
-        <div class="service-card">
-          <h3>Life Insurance</h3>
-          <p>Smart life protection plans with AI-powered recommendations.</p>
+            <h2>
+                Smarter Insurance <br>
+                Comparisons For Modern People
+            </h2>
 
-          <ul>
-            <li>Term Life Insurance</li>
-            <li>Whole Life Insurance</li>
-            <li>Universal Life Insurance</li>
-            <li>No Medical Exam Plans</li>
-            <li>Life Insurance Calculator</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Health Insurance</h3>
-          <p>Compare affordable health plans from trusted carriers.</p>
-
-          <ul>
-            <li>Individual Health Plans</li>
-            <li>Family Coverage</li>
-            <li>Dental & Vision</li>
-            <li>Critical Illness Plans</li>
-            <li>Compare Health Quotes</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Auto Insurance</h3>
-          <p>Get car, EV, and motorcycle insurance in minutes.</p>
-
-          <ul>
-            <li>Car Insurance Quotes</li>
-            <li>Motorcycle Insurance</li>
-            <li>EV Insurance</li>
-            <li>Compare Auto Coverage</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Home & Travel</h3>
-          <p>Protect your property and travel with customized coverage.</p>
-
-          <ul>
-            <li>Homeowners Insurance</li>
-            <li>Renters Insurance</li>
-            <li>International Travel Insurance</li>
-            <li>Family Travel Coverage</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HOME SERVICES -->
-
-  <section id="services">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Home Improvement Services</h2>
-        <p>
-          Connect with trusted local contractors and compare pricing for your next project.
-        </p>
-      </div>
-
-      <div class="card-grid">
-
-        <div class="service-card">
-          <h3>Roofing</h3>
-          <ul>
-            <li>Roof Repair</li>
-            <li>Roof Replacement</li>
-            <li>Free Roofing Quotes</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Windows & Doors</h3>
-          <ul>
-            <li>Window Replacement</li>
-            <li>Door Installation</li>
-            <li>Energy-Efficient Solutions</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>HVAC Services</h3>
-          <ul>
-            <li>AC Repair & Installation</li>
-            <li>Heating Services</li>
-            <li>HVAC Replacement Quotes</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Kitchen Remodeling</h3>
-          <ul>
-            <li>Cabinet Installation</li>
-            <li>Full Renovation</li>
-            <li>Design Consultation</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Bathroom Remodeling</h3>
-          <ul>
-            <li>Shower Replacement</li>
-            <li>Walk-In Tubs</li>
-            <li>Bathroom Renovation</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Solar & Flooring</h3>
-          <ul>
-            <li>Solar Installation</li>
-            <li>Flooring Estimates</li>
-            <li>Hardwood & Vinyl</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-
-  <section>
-    <div class="container">
-
-      <div class="section-title">
-        <h2>How It Works</h2>
-        <p>
-          Compare providers, get personalized recommendations, and save more in just a few simple steps.
-        </p>
-      </div>
-
-      <div class="steps">
-
-        <div class="step-box">
-          <div class="step-number">1</div>
-          <h3>Tell Us Your Needs</h3>
-          <p>
-            Select your insurance or home service category and provide project details.
-          </p>
-        </div>
-
-        <div class="step-box">
-          <div class="step-number">2</div>
-          <h3>Compare Quotes</h3>
-          <p>
-            Instantly compare providers, pricing, coverage, and contractor options.
-          </p>
-        </div>
-
-        <div class="step-box">
-          <div class="step-number">3</div>
-          <h3>Choose & Save</h3>
-          <p>
-            Select the best option and connect directly with trusted providers.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-
-  <section>
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Why Choose Us</h2>
-        <p>
-          Everything you need for insurance and home improvement comparison in one powerful platform.
-        </p>
-      </div>
-
-      <div class="why-grid">
-
-        <div class="why-card">
-          <h4>AI Recommendations</h4>
-          <p>
-            Smart matching engine for better quotes and personalized guidance.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <h4>Transparent Pricing</h4>
-          <p>
-            No hidden fees, clear comparisons, and honest provider information.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <h4>Licensed Experts</h4>
-          <p>
-            Work with verified insurance professionals and trusted contractors.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <h4>Fast Support</h4>
-          <p>
-            Live assistance, claim support, and customer success teams available.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TOOLS -->
-
-  <section id="tools">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Tools & Calculators</h2>
-        <p>
-          Use smart financial and project calculators to estimate costs and coverage.
-        </p>
-      </div>
-
-      <div class="tools-grid">
-
-        <div class="tool-box">
-          <h3>Life Insurance Calculator</h3>
-          <p>Estimate the right life coverage for your family and goals.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3>Premium Estimator</h3>
-          <p>Calculate monthly insurance premiums instantly.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3>Solar Savings Calculator</h3>
-          <p>See how much you can save by switching to solar energy.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3>Coverage Needs Analyzer</h3>
-          <p>Get AI-generated recommendations for the best protection plans.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-
-  <section id="reviews">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Customer Reviews</h2>
-        <p>
-          Thousands of customers trust our comparison platform every day.
-        </p>
-      </div>
-
-      <div class="review-grid">
-
-        <div class="review-card">
-          <p>
-            “The quote comparison process was incredibly fast. I found a better auto insurance policy and saved money instantly.”
-          </p>
-
-          <h4>— Michael R.</h4>
-        </div>
-
-        <div class="review-card">
-          <p>
-            “I used the platform for roofing quotes and got connected with trusted contractors within minutes.”
-          </p>
-
-          <h4>— Sarah T.</h4>
-        </div>
-
-        <div class="review-card">
-          <p>
-            “The AI recommendations made choosing health insurance much easier than other comparison sites.”
-          </p>
-
-          <h4>— Daniel P.</h4>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ -->
-
-  <section id="faq">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-container">
-
-        <div class="faq-item active">
-          <div class="faq-question">
-            Are quotes completely free?
-            <span>+</span>
-          </div>
-
-          <div class="faq-answer">
             <p>
-              Yes, all insurance and contractor quotes are completely free with no obligation.
+                We help individuals and families compare trusted insurance
+                providers with complete transparency, intelligent recommendations,
+                and a faster quote experience — all in one powerful platform.
             </p>
-          </div>
+
+            <div class="hero-badge-wrap">
+
+                <div class="hero-badge">
+                    <h3>25K+</h3>
+                    <span>Policies Compared</span>
+                </div>
+
+                <div class="hero-badge">
+                    <h3>120+</h3>
+                    <span>Insurance Partners</span>
+                </div>
+
+                <div class="hero-badge">
+                    <h3>98%</h3>
+                    <span>Customer Satisfaction</span>
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            How do you verify contractors?
-            <span>+</span>
-          </div>
-
-          <div class="faq-answer">
-            <p>
-              We work with licensed, insured, and reviewed contractors to ensure quality service.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            Can I compare multiple insurance providers?
-            <span>+</span>
-          </div>
-
-          <div class="faq-answer">
-            <p>
-              Yes, our platform compares multiple providers instantly for better coverage and pricing.
-            </p>
-          </div>
-        </div>
-
-      </div>
 
     </div>
-  </section>
 
-  <!-- CTA -->
+</section>
 
-  <section>
+<!-- =========================
+        Back Home page
+========================= -->
+
+<section class="back-home-page-btn">
     <div class="container">
-      <div class="cta">
-
-        <h2>Ready to Compare & Save?</h2>
-
-        <p>
-          Compare insurance plans and home service quotes with one powerful platform.
-        </p>
-
-        <a href="#quote" class="btn primary-btn">
-          Start Comparing Today
-        </a>
-
-      </div>
+        <div class="back-btn-bx">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>/</li>
+                <li>About us</li>
+            </ul>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- FOOTER -->
+<!-- =========================
+        WHO WE ARE
+========================= -->
 
-  <footer id="contact">
+<section class="who-we-are sec-padding">
+
     <div class="container">
 
-      <div class="footer-grid">
+        <div class="row">
 
-        <div class="footer-box">
-          <h3>Compare360</h3>
-          <p>
-            AI-powered insurance and home services comparison platform.
-          </p>
+            <div class="about-left col-lg-6">
+                <div class="about-left-content">
+                    <span class="mini-tag">
+                        WHO WE ARE
+                    </span>
+
+                    <h2>
+                        Helping Customers Make Better Financial Decisions
+                    </h2>
+
+                    <p>
+                        Our platform was built to simplify insurance comparison
+                        and remove the confusion people face while searching for
+                        the right coverage plans online.
+                    </p>
+
+                    <p>
+                        From life and health insurance to auto and travel coverage,
+                        we combine technology and expert insights to help customers
+                        compare smarter, save more, and stay protected.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="about-right col-lg-6">
+
+                <div class="info-card">
+
+                    <!-- <div class="icon-box">
+                        ✦
+                    </div> -->
+
+                    <h3><span><i class="fa-solid fa-bullseye style="line-height: 1; color: rgb(30, 48, 80);></i></span> Our Mission</h3>
+
+                    <p>
+                        Our mission is to create a transparent comparison
+                        experience where customers can explore insurance plans
+                        confidently without hidden confusion or unnecessary pressure.
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <!-- <div class="icon-box">
+                        ✦
+                    </div> -->
+
+                    <h3><span><i class="fa-solid fa-handshake"></i></span> Responsibility</h3>
+
+                    <p>
+                        We believe in providing accurate information, trusted
+                        recommendations, and reliable support to help customers
+                        make informed financial decisions every day.
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <!-- <div class="icon-box">
+                        ✦
+                    </div> -->
+
+                    <h3> <span><i class="fa-regular fa-gem"></i></span> Company Values</h3>
+
+                    <p>
+                        Transparency, innovation, customer trust, and simplicity
+                        are at the core of everything we build and every experience
+                        we deliver through our platform.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="footer-box">
-          <h3>Insurance</h3>
-
-          <ul>
-            <li>Life Insurance</li>
-            <li>Health Insurance</li>
-            <li>Auto Insurance</li>
-            <li>Business Insurance</li>
-          </ul>
-        </div>
-
-        <div class="footer-box">
-          <h3>Home Services</h3>
-
-          <ul>
-            <li>Roofing</li>
-            <li>Solar</li>
-            <li>Kitchen Remodeling</li>
-            <li>HVAC Services</li>
-          </ul>
-        </div>
-
-        <div class="footer-box">
-          <h3>Support</h3>
-
-          <ul>
-            <li>Contact Us</li>
-            <li>Live Chat</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Compare360. All Rights Reserved.</p>
-      </div>
 
     </div>
-  </footer>
+
+</section>
 
 
-  <script>
 
-    // MOBILE MENU
+<!-- =========================
+        WHAT WE OFFER
+========================= -->
 
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
+<section class="offer-section sec-padding">
 
-    menuBtn.addEventListener('click',()=>{
-      navLinks.classList.toggle('active');
-    });
+    <div class="container">
+
+        <div class="heading-bx">
+
+            <span class="mini-tag">
+                WHAT WE OFFER
+            </span>
+
+            <h2>
+                Insurance Solutions Designed Around Your Needs
+            </h2>
+
+            <p>
+                Explore personalized insurance categories with smart comparison tools and trusted providers.
+            </p>
+
+        </div>
 
 
-    // FAQ
+        <div class="row">
+            <div class="offer-card-bx col-lg-3">
+                <div class="offer-card ">
 
-    const faqItems = document.querySelectorAll('.faq-item');
+                <div class="offer-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
 
-    faqItems.forEach(item=>{
+                <h3>Life Insurance</h3>
 
-      const question = item.querySelector('.faq-question');
+                <p>
+                    Protect your family’s future with flexible and affordable life insurance plans.
+                </p>
+                <div class="read-btn-bx">
+                    <a href="#" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div> 
+            </div>
+           </div>
 
-      question.addEventListener('click',()=>{
+            <div class="offer-card-bx col-lg-3">
+                <div class="offer-card">
 
-        faqItems.forEach(faq=>{
-          if(faq !== item){
-            faq.classList.remove('active');
-          }
-        });
+                    <div class="offer-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
 
-        item.classList.toggle('active');
+                    <h3>Health Insurance</h3>
 
-      });
+                    <p>
+                        Compare trusted health coverage plans for individuals and families.
+                    </p>
+                    <div class="read-btn-bx">
+                        <a href="#" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
 
-    });
+            <div class="offer-card-bx col-lg-3">
+                <div class="offer-card">
 
-  </script>
+                    <div class="offer-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
 
+                    <h3>Auto Insurance</h3>
+
+                    <p>
+                        Find smarter vehicle coverage with instant quote comparison tools.
+                    </p>
+                    <div class="read-btn-bx">
+                        <a href="#" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card-bx col-lg-3">
+                <div class="offer-card ">
+
+                    <div class="offer-icon">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+
+                    <h3>Home & Travel</h3>
+
+                    <p>
+                        Secure your property and travel experience with customized protection plans.
+                    </p>
+                    <div class="read-btn-bx">
+                        <a href="#" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+        CTA SECTION
+========================= -->
+
+<section class="about-cta">
+
+    <div class="container">
+
+        <div class="heading-bx">
+
+            <h2>
+                Start Comparing Insurance Plans Today
+            </h2>
+
+            <p>
+                Compare policies, explore coverage options, and discover
+                smarter financial protection with one powerful platform.
+            </p>
+
+            <a href="#" class="primary-btn">
+                Get Free Quotes
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-sec">
+		<div class="container">
+			<div class="links-wrapper">
+				<div class="row">
+					<div class="col-lg-5">
+						<a href="index.html" class="logo-footer"> Compare360 </a>
+					</div>
+                    <div class="col-lg-2">
+						<div class="links-group mt-5 mt-lg-0">
+							<h6 class="fsz-18 mb-4"> Insurance </h6>
+							<ul class="links">
+								<li> <a href="about.html"> Life Insurance </a> </li>
+								<li> <a href="privacy.html">  Health Insurance </a> </li>
+								<li> <a href="contact.html"> Auto Insurance </a> </li>
+                                <li> <a href="contact.html"> Home & Travel </a> </li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="links-group mt-5 mt-lg-0">
+							<h6 class="fsz-18 mb-4"> More Service </h6>
+							<ul class="links">
+								<li> <a href="about.html"> About us </a> </li>
+								<li> <a href="privacy.html"> Privacy Policy </a> </li>
+								<li> <a href="contact.html"> Contact us </a> </li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="links-group mt-5 mt-lg-0">
+							<h6 class="fsz-18 mb-4"> Address </h6>
+							<ul class="links">
+								<li> <a href="#"> 785 15h Street - Sydney Harbor <br> Bridge Circular City of Sydney,
+									</a> </li>
+								<li> <a href="#" class="opacity-100"> #India. </a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-7">
+						<div class="copy-right"> Built on intelligence. Driven by performance © Powered by <a href="#" class="cr-dark1"> Havmor Media </a>    </div>
+					</div>
+					<div class="col-lg-5">
+						<div class="foot-links text-lg-end mt-5 mt-lg-0">
+							<a href="faq.html"> FAQ's </a>
+							<a href="contact.html"> Contact Us </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</footer>
+
+     <script src="js/script.js"></script>
 </body>
 </html>
