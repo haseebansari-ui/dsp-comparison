@@ -1,87 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Life Insurance</title>
-<link rel="stylesheet" href="css/demo.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Health Insurance</title>
+
+<!-- FONT AWESOME -->
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#07111f;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#2563eb30;
+filter:blur(120px);
+top:-200px;
+left:-100px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:#7c3aed30;
+filter:blur(120px);
+bottom:-200px;
+right:-100px;
+z-index:-1;
+}
+
+/* HERO SECTION */
+
+.hero{
+padding:120px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+min-height:100vh;
+position:relative;
+}
+
+.hero-content{
+max-width:620px;
+animation:fadeUp 1s ease;
+}
+
+.hero-badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 18px;
+border-radius:50px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.1);
+margin-bottom:25px;
+font-size:14px;
+color:#cbd5e1;
+}
+
+.hero-content h1{
+font-size:64px;
+line-height:1.1;
+margin-bottom:25px;
+font-weight:800;
+}
+
+.hero-content h1 span{
+background:linear-gradient(to right,#60a5fa,#a78bfa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.9;
+color:#cbd5e1;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+padding:16px 34px;
+border-radius:50px;
+background:linear-gradient(to right,#2563eb,#7c3aed);
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.primary-btn:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(124,58,237,.35);
+}
+
+.secondary-btn{
+padding:16px 34px;
+border-radius:50px;
+border:1px solid rgba(255,255,255,0.2);
+color:#fff;
+text-decoration:none;
+transition:.4s;
+}
+
+.secondary-btn:hover{
+background:rgba(255,255,255,0.08);
+}
+
+/* HERO IMAGE CARD */
+
+.hero-card{
+width:380px;
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.08);
+position:relative;
+overflow:hidden;
+animation:float 4s ease-in-out infinite;
+}
+
+.hero-card::before{
+content:'';
+position:absolute;
+width:180px;
+height:180px;
+background:#2563eb50;
+border-radius:50%;
+top:-80px;
+right:-70px;
+}
+
+.hero-card i{
+font-size:65px;
+margin-bottom:25px;
+color:#60a5fa;
+}
+
+.hero-card h3{
+font-size:32px;
+margin-bottom:18px;
+}
+
+.hero-card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:0 8% 80px;
+}
+
+.stat-box{
+padding:30px;
+border-radius:24px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+text-align:center;
+transition:.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-8px);
+}
+
+.stat-box h2{
+font-size:42px;
+margin-bottom:10px;
+background:linear-gradient(to right,#60a5fa,#a78bfa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.stat-box p{
+color:#cbd5e1;
+}
+
+/* SECTION */
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:48px;
+margin-bottom:18px;
+}
+
+.section-title p{
+color:#cbd5e1;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+/* CARD GRID */
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.insurance-card{
+padding:35px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+position:relative;
+overflow:hidden;
+transition:.5s;
+}
+
+.insurance-card::before{
+content:'';
+position:absolute;
+width:120px;
+height:120px;
+background:#7c3aed30;
+border-radius:50%;
+top:-40px;
+right:-40px;
+}
+
+.insurance-card:hover{
+transform:translateY(-12px);
+border-color:#7c3aed;
+}
+
+.insurance-card i{
+font-size:48px;
+margin-bottom:25px;
+color:#60a5fa;
+}
+
+.insurance-card h3{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.insurance-card p{
+line-height:1.9;
+color:#cbd5e1;
+}
+
+/* CTA */
+
+.cta{
+margin:80px 8%;
+padding:70px;
+border-radius:35px;
+text-align:center;
+background:linear-gradient(to right,#2563eb,#7c3aed);
+position:relative;
+overflow:hidden;
+}
+
+.cta::before{
+content:'';
+position:absolute;
+width:250px;
+height:250px;
+background:rgba(255,255,255,0.15);
+border-radius:50%;
+top:-100px;
+right:-80px;
+}
+
+.cta h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.cta a{
+display:inline-block;
+padding:16px 35px;
+background:#fff;
+color:#111827;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+transition:.4s;
+}
+
+.cta a:hover{
+transform:scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-18px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* SCROLL ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:90px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:46px;
+}
+
+.hero-card{
+width:100%;
+}
+
+.section-title h2{
+font-size:38px;
+}
+
+.cta h2{
+font-size:36px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
 <!-- HERO -->
+
 <section class="hero">
-    <div class="hero-bg"></div>
 
-    <div class="hero-content">
-        <span class="tag">Secure Your Family Future</span>
-        <h1>Life Insurance Made <span>Simple</span></h1>
-        <p>
-            Compare trusted life insurance providers, estimate your coverage needs,
-            and protect your loved ones with affordable plans tailored for every stage of life.
-        </p>
+<div class="hero-content">
 
-        <button>Compare Quotes</button>
-    </div>
-
-    <div class="hero-icon">
-        <i class="fa-solid fa-shield-heart"></i>
-    </div>
-</section>
-
-
-<!-- TIMELINE SECTIONS -->
-
-<section class="insurance-flow">
-
-<div class="line"></div>
-
-<div class="item left reveal">
-    <i class="fa-solid fa-hourglass-half"></i>
-    <h2>Term Life Insurance</h2>
-    <p>Affordable temporary protection for 10, 20, or 30 years.</p>
+<div class="hero-badge">
+<i class="fa-solid fa-heart-pulse"></i>
+Trusted Health Coverage
 </div>
 
-<div class="item right reveal">
-    <i class="fa-solid fa-infinity"></i>
-    <h2>Whole Life Insurance</h2>
-    <p>Lifetime coverage with guaranteed cash value growth.</p>
+<h1>
+Find Better <span>Health Insurance</span> Plans For Your Future
+</h1>
+
+<p>
+Compare top-rated health insurance plans designed to protect you and your family from unexpected medical expenses. Explore affordable coverage options, wellness benefits, and flexible healthcare solutions tailored to your needs.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="primary-btn">
+Compare Plans
+</a>
+
+<a href="#" class="secondary-btn">
+Get Free Quote
+</a>
 </div>
 
-<div class="item left reveal">
-    <i class="fa-solid fa-globe"></i>
-    <h2>Universal Life Insurance</h2>
-    <p>Flexible premiums and adjustable death benefits.</p>
 </div>
 
-<div class="item right reveal">
-    <i class="fa-solid fa-user-shield"></i>
-    <h2>Senior Life Insurance</h2>
-    <p>Coverage options designed specifically for seniors.</p>
-</div>
+<div class="hero-card">
 
-<div class="item left reveal">
-    <i class="fa-solid fa-file-medical"></i>
-    <h2>No Medical Exam Insurance</h2>
-    <p>Fast approval without medical testing requirements.</p>
-</div>
+<i class="fa-solid fa-shield-heart"></i>
 
-<div class="item right reveal">
-    <i class="fa-solid fa-calculator"></i>
-    <h2>Life Insurance Calculator</h2>
-    <p>Estimate ideal coverage based on your financial needs.</p>
-</div>
+<h3>Smart Healthcare Protection</h3>
 
-<div class="item center compare reveal">
-    <i class="fa-solid fa-scale-balanced"></i>
-    <h2>Compare Life Insurance Quotes</h2>
-    <p>Instantly compare plans from leading providers.</p>
-    <button>Start Comparing</button>
+<p>
+Get access to comprehensive medical coverage, hospital benefits, preventive care, and financial security with trusted health insurance providers.
+</p>
+
 </div>
 
 </section>
 
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-box hidden">
+<h2>500+</h2>
+<p>Insurance Plans Compared</p>
+</div>
+
+<div class="stat-box hidden">
+<h2>98%</h2>
+<p>Customer Satisfaction Rate</p>
+</div>
+
+<div class="stat-box hidden">
+<h2>24/7</h2>
+<p>Claim Assistance Support</p>
+</div>
+
+<div class="stat-box hidden">
+<h2>50+</h2>
+<p>Trusted Insurance Partners</p>
+</div>
+
+</section>
+
+<!-- INSURANCE PLANS -->
+
+<section class="section">
+
+<div class="section-title hidden">
+<h2>Health Insurance Solutions</h2>
+
+<p>
+Choose the right healthcare coverage for every stage of life with customizable plans designed to provide financial confidence and quality medical care.
+</p>
+</div>
+
+<div class="card-grid">
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-user"></i>
+<h3>Individual Health Plans</h3>
+<p>
+Affordable health insurance coverage designed for individuals seeking personalized medical benefits, preventive care, and emergency protection.
+</p>
+</div>
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-users"></i>
+<h3>Family Health Insurance</h3>
+<p>
+Comprehensive healthcare coverage for your entire family with shared benefits, hospitalization support, and wellness programs.
+</p>
+</div>
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-heart-circle-bolt"></i>
+<h3>Critical Illness Coverage</h3>
+<p>
+Financial protection against serious illnesses including cancer, stroke, and heart disease with lump-sum benefit support.
+</p>
+</div>
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-eye"></i>
+<h3>Dental & Vision Plans</h3>
+<p>
+Access affordable dental checkups, eye care, vision exams, glasses, and preventive treatment plans for complete healthcare.
+</p>
+</div>
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-scale-balanced"></i>
+<h3>Compare Health Plans</h3>
+<p>
+Quickly compare premiums, benefits, coverage limits, deductibles, and provider networks from leading insurers in one place.
+</p>
+</div>
+
+<div class="insurance-card hidden">
+<i class="fa-solid fa-hospital"></i>
+<h3>Nationwide Hospital Network</h3>
+<p>
+Get access to cashless hospitalization and trusted healthcare providers across an extensive nationwide medical network.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta hidden">
+
+<h2>Protect Your Health With The Right Coverage</h2>
+
+<p>
+Compare affordable health insurance plans from trusted providers and secure peace of mind for yourself and your loved ones today.
+</p>
+
+<a href="#">
+Start Comparing Now
+</a>
+
+</section>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach((entry) => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+hiddenElements.forEach((el) => observer.observe(el));
+
+</script>
 
 </body>
 </html>
