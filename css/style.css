@@ -151,6 +151,27 @@ a{
     box-shadow: 0 0 15px var(--white-shade2);
 }
 
+.banner-gradient{
+    position: relative;
+    overflow: hidden;
+    background:radial-gradient(circle at top left,rgba(140, 102, 255, 0.18) 0%,transparent 30%),
+       radial-gradient(circle at bottom right,rgba(110, 72, 220, 0.16) 0%,transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,0.10) 0%,rgba(255,255,255,0.02) 38%),
+    linear-gradient(225deg,rgba(255,255,255,0) 18%,rgba(160, 145, 210, 0.12) 50%,rgba(255,255,55,0) 82%),
+    linear-gradient(135deg,#ebebf5 0%,#d9d6ef 22%,#c5bde8 48%,#a894dc 72%,#8d78cf 100%);
+}
+.banner-gradient::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(124, 77, 255, 0.671);
+    filter: blur(120px);
+    top: -200px;
+    right: -100px;
+}
+
 /* --- Header --- */
 header{
     padding: 1.5rem 0;
@@ -905,34 +926,6 @@ header{
       ABOUT PAGE CSS
 ========================= */
 
-.about-hero{
-    position: relative;
-    overflow: hidden;
-    background:radial-gradient(circle at top left,rgba(140, 102, 255, 0.18) 0%,transparent 30%),
-       radial-gradient(circle at bottom right,rgba(110, 72, 220, 0.16) 0%,transparent 34%),
-    linear-gradient(145deg,rgba(255,255,255,0.10) 0%,rgba(255,255,255,0.02) 38%),
-    linear-gradient(225deg,rgba(255,255,255,0) 18%,rgba(160, 145, 210, 0.12) 50%,rgba(255,255,55,0) 82%),
-    linear-gradient(135deg,#ebebf5 0%,#d9d6ef 22%,#c5bde8 48%,#a894dc 72%,#8d78cf 100%);
-}
-
-.about-hero::before{
-    content: '';
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    border-radius: 50%;
-
-    background: rgba(124, 77, 255, 0.671);
-
-    filter: blur(120px);
-
-    top: -200px;
-    right: -100px;
-}
-
 .about-hero-content{
     position: relative;
     z-index: 2;
@@ -1232,16 +1225,6 @@ header{
 
 /* ---- Life Insurance ---- */
 
-.life-ins-sec{
-    position: relative;
-    overflow: hidden;
-    background:radial-gradient(circle at top left,rgba(140, 102, 255, 0.18) 0%,transparent 30%),
-       radial-gradient(circle at bottom right,rgba(110, 72, 220, 0.16) 0%,transparent 34%),
-    linear-gradient(145deg,rgba(255,255,255,0.10) 0%,rgba(255,255,255,0.02) 38%),
-    linear-gradient(225deg,rgba(255,255,255,0) 18%,rgba(160, 145, 210, 0.12) 50%,rgba(255,255,55,0) 82%),
-    linear-gradient(135deg,#ebebf5 0%,#d9d6ef 22%,#c5bde8 48%,#a894dc 72%,#8d78cf 100%);
-}
-
 .life-ins-content p{
     margin-bottom: 2rem;
 }
@@ -1277,8 +1260,7 @@ animation:float 4s ease infinite;
 
 .life-ins-items .offer-card{
     border: 1px solid var(--white-color);
-    box-shadow: 0 0 20px #ebeb;
-    background: #ebebeb;
+    box-shadow: 0 0 20px #d3d3d3;
 }
 
 .life-ins-items .offer-card .offer-icon{
@@ -1297,9 +1279,9 @@ animation:float 4s ease infinite;
     color: var(--bg-purple-shade2);
 }
 
-.life-ins-type-sec{
+/* .life-ins-type-sec{
     background: linear-gradient(235deg, rgba(255, 255, 255, 0) 8%, rgba(89, 32, 197, 0.35) 30%, rgba(92, 86, 119, 0.18) 52%, rgba(255, 255, 255, 0) 75%, rgba(238, 187, 238, 0.67) 100%);
-}
+} */
 
 .life-ins-type-sec .heading-bx{
     margin-bottom: 3rem;
