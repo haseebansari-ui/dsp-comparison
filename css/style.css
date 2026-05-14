@@ -52,16 +52,19 @@ a{
 }
 .heading-bx{
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .heading-bx h2{
     font-size: 3rem;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .heading-bx h2 span{
     color: var(--bg-purple-shade2);
 }
+
 
 /* --- reusable Code --- */
 
@@ -174,7 +177,7 @@ a{
 
 /* --- Header --- */
 header{
-    padding: 1.5rem 0;
+    padding: 0.6rem 0;
     background: var(--bg-color1);
     border-bottom: 1px solid var(--bg-purple-shade1);
     position:sticky;
@@ -1279,14 +1282,6 @@ animation:float 4s ease infinite;
     color: var(--bg-purple-shade2);
 }
 
-/* .life-ins-type-sec{
-    background: linear-gradient(235deg, rgba(255, 255, 255, 0) 8%, rgba(89, 32, 197, 0.35) 30%, rgba(92, 86, 119, 0.18) 52%, rgba(255, 255, 255, 0) 75%, rgba(238, 187, 238, 0.67) 100%);
-} */
-
-.life-ins-type-sec .heading-bx{
-    margin-bottom: 3rem;
-}
-
 .life-ins-content-card{
     width: 380px;
     padding: 40px;
@@ -1331,4 +1326,28 @@ animation:float 4s ease infinite;
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--bg-purple-shade2);
+}
+
+/* --- Health Insurance page --- */
+
+.stats .stat-items .stat-box{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 0 20px #d3d3d3;
+}
+
+.stats .stat-items .stat-box:hover{
+    transform: translateY(-10px);
+}
+
+.btn-get-free-quote .get-quote{
+    width: 200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--bg-purple-shade2);
+    color: var(--white-color);
+    font-weight: 600;
 }

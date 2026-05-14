@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Health Insurance</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Auto Insurance</title>
 
 <!-- FONT AWESOME -->
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,28 +29,37 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* BACKGROUND GLOW */
+/* SCROLL BAR */
 
-body::before{
-content:'';
-position:fixed;
-width:500px;
-height:500px;
-background:#2563eb30;
-filter:blur(120px);
-top:-200px;
-left:-100px;
-z-index:-1;
+::-webkit-scrollbar{
+width:8px;
 }
 
-body::after{
-content:'';
+::-webkit-scrollbar-thumb{
+background:linear-gradient(#2563eb,#7c3aed);
+border-radius:20px;
+}
+
+/* BACKGROUND GLOW */
+
+.bg-blur{
 position:fixed;
 width:450px;
 height:450px;
+background:#2563eb30;
+filter:blur(130px);
+top:-150px;
+left:-120px;
+z-index:-1;
+}
+
+.bg-blur2{
+position:fixed;
+width:400px;
+height:400px;
 background:#7c3aed30;
 filter:blur(120px);
-bottom:-200px;
+bottom:-150px;
 right:-100px;
 z-index:-1;
 }
@@ -58,17 +67,17 @@ z-index:-1;
 /* HERO SECTION */
 
 .hero{
+min-height:100vh;
 padding:120px 8%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:60px;
-min-height:100vh;
+gap:70px;
 position:relative;
 }
 
 .hero-content{
-max-width:620px;
+max-width:650px;
 animation:fadeUp 1s ease;
 }
 
@@ -76,17 +85,17 @@ animation:fadeUp 1s ease;
 display:inline-flex;
 align-items:center;
 gap:10px;
-padding:10px 18px;
+padding:12px 18px;
 border-radius:50px;
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.07);
 border:1px solid rgba(255,255,255,0.1);
 margin-bottom:25px;
-font-size:14px;
 color:#cbd5e1;
+font-size:14px;
 }
 
 .hero-content h1{
-font-size:64px;
+font-size:68px;
 line-height:1.1;
 margin-bottom:25px;
 font-weight:800;
@@ -115,8 +124,8 @@ flex-wrap:wrap;
 padding:16px 34px;
 border-radius:50px;
 background:linear-gradient(to right,#2563eb,#7c3aed);
-color:#fff;
 text-decoration:none;
+color:#fff;
 font-weight:600;
 transition:.4s;
 }
@@ -129,9 +138,9 @@ box-shadow:0 15px 30px rgba(124,58,237,.35);
 .secondary-btn{
 padding:16px 34px;
 border-radius:50px;
-border:1px solid rgba(255,255,255,0.2);
-color:#fff;
+border:1px solid rgba(255,255,255,0.15);
 text-decoration:none;
+color:#fff;
 transition:.4s;
 }
 
@@ -139,12 +148,12 @@ transition:.4s;
 background:rgba(255,255,255,0.08);
 }
 
-/* HERO IMAGE CARD */
+/* HERO CARD */
 
 .hero-card{
-width:380px;
+width:400px;
 padding:40px;
-border-radius:30px;
+border-radius:32px;
 background:rgba(255,255,255,0.06);
 backdrop-filter:blur(14px);
 border:1px solid rgba(255,255,255,0.08);
@@ -156,18 +165,18 @@ animation:float 4s ease-in-out infinite;
 .hero-card::before{
 content:'';
 position:absolute;
-width:180px;
-height:180px;
-background:#2563eb50;
+width:200px;
+height:200px;
+background:#2563eb40;
 border-radius:50%;
 top:-80px;
-right:-70px;
+right:-80px;
 }
 
 .hero-card i{
 font-size:65px;
-margin-bottom:25px;
 color:#60a5fa;
+margin-bottom:25px;
 }
 
 .hero-card h3{
@@ -176,22 +185,22 @@ margin-bottom:18px;
 }
 
 .hero-card p{
-line-height:1.8;
+line-height:1.9;
 color:#cbd5e1;
 }
 
-/* STATS */
+/* TRUSTED STATS */
 
 .stats{
+padding:0 8% 100px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-padding:0 8% 80px;
 }
 
 .stat-box{
-padding:30px;
-border-radius:24px;
+padding:35px;
+border-radius:25px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 text-align:center;
@@ -199,7 +208,7 @@ transition:.4s;
 }
 
 .stat-box:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .stat-box h2{
@@ -226,15 +235,15 @@ margin-bottom:70px;
 }
 
 .section-title h2{
-font-size:48px;
-margin-bottom:18px;
+font-size:50px;
+margin-bottom:20px;
 }
 
 .section-title p{
-color:#cbd5e1;
-max-width:700px;
+max-width:750px;
 margin:auto;
-line-height:1.8;
+line-height:1.9;
+color:#cbd5e1;
 }
 
 /* CARD GRID */
@@ -246,8 +255,8 @@ gap:30px;
 }
 
 .insurance-card{
-padding:35px;
-border-radius:28px;
+padding:38px;
+border-radius:30px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 position:relative;
@@ -258,12 +267,12 @@ transition:.5s;
 .insurance-card::before{
 content:'';
 position:absolute;
-width:120px;
-height:120px;
-background:#7c3aed30;
+width:130px;
+height:130px;
+background:#7c3aed35;
 border-radius:50%;
-top:-40px;
-right:-40px;
+top:-50px;
+right:-50px;
 }
 
 .insurance-card:hover{
@@ -272,14 +281,14 @@ border-color:#7c3aed;
 }
 
 .insurance-card i{
-font-size:48px;
+font-size:50px;
 margin-bottom:25px;
 color:#60a5fa;
 }
 
 .insurance-card h3{
-font-size:26px;
-margin-bottom:15px;
+font-size:28px;
+margin-bottom:16px;
 }
 
 .insurance-card p{
@@ -287,11 +296,50 @@ line-height:1.9;
 color:#cbd5e1;
 }
 
+/* PROCESS SECTION */
+
+.process{
+padding:100px 8%;
+}
+
+.process-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.process-box{
+padding:35px;
+border-radius:28px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+text-align:center;
+transition:.4s;
+}
+
+.process-box:hover{
+transform:translateY(-10px);
+}
+
+.process-number{
+width:60px;
+height:60px;
+margin:auto;
+margin-bottom:20px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(to right,#2563eb,#7c3aed);
+font-weight:700;
+font-size:22px;
+}
+
 /* CTA */
 
 .cta{
 margin:80px 8%;
-padding:70px;
+padding:80px;
 border-radius:35px;
 text-align:center;
 background:linear-gradient(to right,#2563eb,#7c3aed);
@@ -307,7 +355,7 @@ height:250px;
 background:rgba(255,255,255,0.15);
 border-radius:50%;
 top:-100px;
-right:-80px;
+right:-70px;
 }
 
 .cta h2{
@@ -318,18 +366,18 @@ margin-bottom:20px;
 .cta p{
 max-width:700px;
 margin:auto;
-line-height:1.8;
+line-height:1.9;
 margin-bottom:35px;
 }
 
 .cta a{
 display:inline-block;
-padding:16px 35px;
+padding:16px 38px;
 background:#fff;
 color:#111827;
 border-radius:50px;
-font-weight:700;
 text-decoration:none;
+font-weight:700;
 transition:.4s;
 }
 
@@ -339,15 +387,26 @@ transform:scale(1.05);
 
 /* ANIMATION */
 
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
 @keyframes float{
 0%{
-transform:translateY(0px);
+transform:translateY(0);
 }
 50%{
 transform:translateY(-18px);
 }
 100%{
-transform:translateY(0px);
+transform:translateY(0);
 }
 }
 
@@ -362,19 +421,6 @@ transform:translateY(0);
 }
 }
 
-/* SCROLL ANIMATION */
-
-.hidden{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
-
 /* RESPONSIVE */
 
 @media(max-width:950px){
@@ -385,12 +431,12 @@ text-align:center;
 padding-top:90px;
 }
 
-.hero-buttons{
-justify-content:center;
+.hero-content h1{
+font-size:48px;
 }
 
-.hero-content h1{
-font-size:46px;
+.hero-buttons{
+justify-content:center;
 }
 
 .hero-card{
@@ -412,45 +458,50 @@ font-size:36px;
 
 <body>
 
-<!-- HERO -->
+<div class="bg-blur"></div>
+<div class="bg-blur2"></div>
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
 <div class="hero-content">
 
 <div class="hero-badge">
-<i class="fa-solid fa-heart-pulse"></i>
-Trusted Health Coverage
+<i class="fa-solid fa-car-side"></i>
+Trusted Auto Insurance Comparison
 </div>
 
 <h1>
-Find Better <span>Health Insurance</span> Plans For Your Future
+Drive Safer With <span>Smart Auto Insurance</span> Coverage
 </h1>
 
 <p>
-Compare top-rated health insurance plans designed to protect you and your family from unexpected medical expenses. Explore affordable coverage options, wellness benefits, and flexible healthcare solutions tailored to your needs.
+Compare affordable auto insurance plans designed to protect your vehicle, passengers, and financial future. Explore flexible coverage options, instant quotes, roadside assistance, and trusted protection for every journey.
 </p>
 
 <div class="hero-buttons">
+
 <a href="#" class="primary-btn">
-Compare Plans
+Compare Quotes
 </a>
 
 <a href="#" class="secondary-btn">
-Get Free Quote
+Get Free Estimate
 </a>
+
 </div>
 
 </div>
 
 <div class="hero-card">
 
-<i class="fa-solid fa-shield-heart"></i>
+<i class="fa-solid fa-shield-car"></i>
 
-<h3>Smart Healthcare Protection</h3>
+<h3>Complete Vehicle Protection</h3>
 
 <p>
-Get access to comprehensive medical coverage, hospital benefits, preventive care, and financial security with trusted health insurance providers.
+Protect your car, motorcycle, or electric vehicle with customizable insurance plans offering accident coverage, theft protection, and emergency roadside assistance.
 </p>
 
 </div>
@@ -462,86 +513,156 @@ Get access to comprehensive medical coverage, hospital benefits, preventive care
 <section class="stats">
 
 <div class="stat-box hidden">
-<h2>500+</h2>
-<p>Insurance Plans Compared</p>
-</div>
-
-<div class="stat-box hidden">
-<h2>98%</h2>
-<p>Customer Satisfaction Rate</p>
-</div>
-
-<div class="stat-box hidden">
-<h2>24/7</h2>
-<p>Claim Assistance Support</p>
+<h2>1M+</h2>
+<p>Drivers Protected Nationwide</p>
 </div>
 
 <div class="stat-box hidden">
 <h2>50+</h2>
-<p>Trusted Insurance Partners</p>
+<p>Top Insurance Providers</p>
+</div>
+
+<div class="stat-box hidden">
+<h2>24/7</h2>
+<p>Roadside Assistance Support</p>
+</div>
+
+<div class="stat-box hidden">
+<h2>98%</h2>
+<p>Fast Claim Satisfaction</p>
 </div>
 
 </section>
 
-<!-- INSURANCE PLANS -->
+<!-- INSURANCE TYPES -->
 
 <section class="section">
 
 <div class="section-title hidden">
-<h2>Health Insurance Solutions</h2>
+
+<h2>Auto Insurance Solutions</h2>
 
 <p>
-Choose the right healthcare coverage for every stage of life with customizable plans designed to provide financial confidence and quality medical care.
+Explore modern insurance coverage options tailored for cars, motorcycles, electric vehicles, and everyday drivers looking for affordable protection and smarter comparisons.
 </p>
+
 </div>
 
 <div class="card-grid">
 
 <div class="insurance-card hidden">
-<i class="fa-solid fa-user"></i>
-<h3>Individual Health Plans</h3>
+
+<i class="fa-solid fa-file-invoice-dollar"></i>
+
+<h3>Car Insurance Quotes</h3>
+
 <p>
-Affordable health insurance coverage designed for individuals seeking personalized medical benefits, preventive care, and emergency protection.
+Compare real-time car insurance quotes from trusted providers and find affordable policies with collision, liability, and comprehensive coverage benefits.
 </p>
+
 </div>
 
 <div class="insurance-card hidden">
-<i class="fa-solid fa-users"></i>
-<h3>Family Health Insurance</h3>
+
+<i class="fa-solid fa-motorcycle"></i>
+
+<h3>Motorcycle Insurance</h3>
+
 <p>
-Comprehensive healthcare coverage for your entire family with shared benefits, hospitalization support, and wellness programs.
+Get specialized motorcycle coverage designed to protect riders against accidents, theft, medical expenses, and unexpected road emergencies.
 </p>
+
 </div>
 
 <div class="insurance-card hidden">
-<i class="fa-solid fa-heart-circle-bolt"></i>
-<h3>Critical Illness Coverage</h3>
+
+<i class="fa-solid fa-charging-station"></i>
+
+<h3>EV Insurance</h3>
+
 <p>
-Financial protection against serious illnesses including cancer, stroke, and heart disease with lump-sum benefit support.
+Protect your electric vehicle with modern EV insurance plans covering battery systems, charging equipment, and advanced technology repairs.
 </p>
+
 </div>
 
 <div class="insurance-card hidden">
-<i class="fa-solid fa-eye"></i>
-<h3>Dental & Vision Plans</h3>
-<p>
-Access affordable dental checkups, eye care, vision exams, glasses, and preventive treatment plans for complete healthcare.
-</p>
-</div>
 
-<div class="insurance-card hidden">
 <i class="fa-solid fa-scale-balanced"></i>
-<h3>Compare Health Plans</h3>
+
+<h3>Compare Auto Coverage</h3>
+
 <p>
-Quickly compare premiums, benefits, coverage limits, deductibles, and provider networks from leading insurers in one place.
+Easily compare coverage limits, premiums, deductibles, add-ons, and insurer benefits to choose the best auto insurance plan for your needs.
 </p>
+
 </div>
 
 <div class="insurance-card hidden">
-<i class="fa-solid fa-hospital"></i>
-<h3>Nationwide Hospital Network</h3>
+
+<i class="fa-solid fa-road"></i>
+
+<h3>Roadside Assistance</h3>
+
 <p>
-Get access to cashless hospitalization and trusted healthcare providers across an extensive nationwide medical network.
+Stay protected with emergency towing, flat tire support, fuel delivery, and 24/7 roadside help included in select insurance plans.
+</p>
+
+</div>
+
+<div class="insurance-card hidden">
+
+<i class="fa-solid fa-car-burst"></i>
+
+<h3>Accident Protection</h3>
+
+<p>
+Secure financial protection against vehicle damage, collisions, and unexpected repair costs with comprehensive accident coverage.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="process">
+
+<div class="section-title hidden">
+
+<h2>How Auto Insurance Comparison Works</h2>
+
+<p>
+Compare plans in minutes and discover the best auto insurance coverage with a simple and transparent comparison experience.
+</p>
+
+</div>
+
+<div class="process-wrapper">
+
+<div class="process-box hidden">
+<div class="process-number">1</div>
+<h3>Enter Vehicle Details</h3>
+<p>
+Provide basic information about your car, bike, or EV to receive personalized insurance recommendations.
+</p>
+</div>
+
+<div class="process-box hidden">
+<div class="process-number">2</div>
+<h3>Compare Coverage</h3>
+<p>
+Review premiums, deductibles, benefits, and coverage options from leading insurance companies instantly.
+</p>
+</div>
+
+<div class="process-box hidden">
+<div class="process-number">3</div>
+<h3>Choose Your Plan</h3>
+<p>
+Select the best auto insurance policy that matches your budget, driving habits, and protection needs.
 </p>
 </div>
 
@@ -553,14 +674,14 @@ Get access to cashless hospitalization and trusted healthcare providers across a
 
 <section class="cta hidden">
 
-<h2>Protect Your Health With The Right Coverage</h2>
+<h2>Find The Right Auto Insurance Today</h2>
 
 <p>
-Compare affordable health insurance plans from trusted providers and secure peace of mind for yourself and your loved ones today.
+Compare trusted auto insurance providers and discover affordable protection plans designed for safer driving and complete peace of mind.
 </p>
 
 <a href="#">
-Start Comparing Now
+Start Comparing
 </a>
 
 </section>
@@ -569,9 +690,9 @@ Start Comparing Now
 
 <script>
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries)=>{
 
-entries.forEach((entry) => {
+entries.forEach((entry)=>{
 
 if(entry.isIntersecting){
 entry.target.classList.add('show');
@@ -583,7 +704,7 @@ entry.target.classList.add('show');
 
 const hiddenElements = document.querySelectorAll('.hidden');
 
-hiddenElements.forEach((el) => observer.observe(el));
+hiddenElements.forEach((el)=> observer.observe(el));
 
 </script>
 
