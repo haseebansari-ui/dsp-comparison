@@ -5,14 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Auto Insurance</title>
+<title>Home Insurance</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -24,42 +24,31 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#07111f;
+background:#081120;
 color:#fff;
 overflow-x:hidden;
 }
 
-/* SCROLL BAR */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:linear-gradient(#2563eb,#7c3aed);
-border-radius:20px;
-}
-
 /* BACKGROUND GLOW */
 
-.bg-blur{
+.blur-1{
 position:fixed;
 width:450px;
 height:450px;
 background:#2563eb30;
 filter:blur(130px);
-top:-150px;
-left:-120px;
+top:-120px;
+left:-100px;
 z-index:-1;
 }
 
-.bg-blur2{
+.blur-2{
 position:fixed;
 width:400px;
 height:400px;
 background:#7c3aed30;
 filter:blur(120px);
-bottom:-150px;
+bottom:-140px;
 right:-100px;
 z-index:-1;
 }
@@ -87,11 +76,11 @@ align-items:center;
 gap:10px;
 padding:12px 18px;
 border-radius:50px;
-background:rgba(255,255,255,0.07);
+background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.1);
 margin-bottom:25px;
-color:#cbd5e1;
 font-size:14px;
+color:#cbd5e1;
 }
 
 .hero-content h1{
@@ -124,8 +113,8 @@ flex-wrap:wrap;
 padding:16px 34px;
 border-radius:50px;
 background:linear-gradient(to right,#2563eb,#7c3aed);
-text-decoration:none;
 color:#fff;
+text-decoration:none;
 font-weight:600;
 transition:.4s;
 }
@@ -154,8 +143,8 @@ background:rgba(255,255,255,0.08);
 width:400px;
 padding:40px;
 border-radius:32px;
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(14px);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
 border:1px solid rgba(255,255,255,0.08);
 position:relative;
 overflow:hidden;
@@ -200,7 +189,7 @@ gap:25px;
 
 .stat-box{
 padding:35px;
-border-radius:25px;
+border-radius:26px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 text-align:center;
@@ -240,7 +229,7 @@ margin-bottom:20px;
 }
 
 .section-title p{
-max-width:750px;
+max-width:760px;
 margin:auto;
 line-height:1.9;
 color:#cbd5e1;
@@ -269,7 +258,7 @@ content:'';
 position:absolute;
 width:130px;
 height:130px;
-background:#7c3aed35;
+background:#7c3aed30;
 border-radius:50%;
 top:-50px;
 right:-50px;
@@ -296,43 +285,44 @@ line-height:1.9;
 color:#cbd5e1;
 }
 
-/* PROCESS SECTION */
+/* FEATURES */
 
-.process{
+.features{
 padding:100px 8%;
 }
 
-.process-wrapper{
+.feature-wrapper{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.process-box{
+.feature-box{
 padding:35px;
 border-radius:28px;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
-text-align:center;
 transition:.4s;
 }
 
-.process-box:hover{
+.feature-box:hover{
 transform:translateY(-10px);
 }
 
-.process-number{
-width:60px;
-height:60px;
-margin:auto;
+.feature-box i{
+font-size:42px;
 margin-bottom:20px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-background:linear-gradient(to right,#2563eb,#7c3aed);
-font-weight:700;
-font-size:22px;
+color:#60a5fa;
+}
+
+.feature-box h3{
+margin-bottom:14px;
+font-size:24px;
+}
+
+.feature-box p{
+line-height:1.8;
+color:#cbd5e1;
 }
 
 /* CTA */
@@ -340,7 +330,7 @@ font-size:22px;
 .cta{
 margin:80px 8%;
 padding:80px;
-border-radius:35px;
+border-radius:36px;
 text-align:center;
 background:linear-gradient(to right,#2563eb,#7c3aed);
 position:relative;
@@ -375,9 +365,9 @@ display:inline-block;
 padding:16px 38px;
 background:#fff;
 color:#111827;
-border-radius:50px;
 text-decoration:none;
 font-weight:700;
+border-radius:50px;
 transition:.4s;
 }
 
@@ -458,26 +448,26 @@ font-size:36px;
 
 <body>
 
-<div class="bg-blur"></div>
-<div class="bg-blur2"></div>
+<div class="blur-1"></div>
+<div class="blur-2"></div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-content">
 
 <div class="hero-badge">
-<i class="fa-solid fa-car-side"></i>
-Trusted Auto Insurance Comparison
+<i class="fa-solid fa-house"></i>
+Trusted Home Insurance Comparison
 </div>
 
 <h1>
-Drive Safer With <span>Smart Auto Insurance</span> Coverage
+Protect Your <span>Home & Property</span> With Confidence
 </h1>
 
 <p>
-Compare affordable auto insurance plans designed to protect your vehicle, passengers, and financial future. Explore flexible coverage options, instant quotes, roadside assistance, and trusted protection for every journey.
+Compare affordable home insurance plans designed to protect your property, belongings, and financial future. Explore flexible coverage options for homeowners, renters, condo owners, and landlords with trusted insurance providers.
 </p>
 
 <div class="hero-buttons">
@@ -496,12 +486,12 @@ Get Free Estimate
 
 <div class="hero-card">
 
-<i class="fa-solid fa-shield-car"></i>
+<i class="fa-solid fa-shield-house"></i>
 
-<h3>Complete Vehicle Protection</h3>
+<h3>Complete Home Protection</h3>
 
 <p>
-Protect your car, motorcycle, or electric vehicle with customizable insurance plans offering accident coverage, theft protection, and emergency roadside assistance.
+Safeguard your property against fire, theft, natural disasters, and unexpected damages with customizable home insurance coverage plans.
 </p>
 
 </div>
@@ -513,23 +503,23 @@ Protect your car, motorcycle, or electric vehicle with customizable insurance pl
 <section class="stats">
 
 <div class="stat-box hidden">
-<h2>1M+</h2>
-<p>Drivers Protected Nationwide</p>
+<h2>750K+</h2>
+<p>Homes Protected Nationwide</p>
 </div>
 
 <div class="stat-box hidden">
 <h2>50+</h2>
-<p>Top Insurance Providers</p>
+<p>Trusted Insurance Providers</p>
 </div>
 
 <div class="stat-box hidden">
 <h2>24/7</h2>
-<p>Roadside Assistance Support</p>
+<p>Claims & Emergency Support</p>
 </div>
 
 <div class="stat-box hidden">
-<h2>98%</h2>
-<p>Fast Claim Satisfaction</p>
+<h2>97%</h2>
+<p>Customer Satisfaction Rate</p>
 </div>
 
 </section>
@@ -540,10 +530,10 @@ Protect your car, motorcycle, or electric vehicle with customizable insurance pl
 
 <div class="section-title hidden">
 
-<h2>Auto Insurance Solutions</h2>
+<h2>Home Insurance Solutions</h2>
 
 <p>
-Explore modern insurance coverage options tailored for cars, motorcycles, electric vehicles, and everyday drivers looking for affordable protection and smarter comparisons.
+Explore modern home insurance coverage options tailored for homeowners, renters, condo owners, and landlords looking for reliable financial protection and peace of mind.
 </p>
 
 </div>
@@ -552,36 +542,60 @@ Explore modern insurance coverage options tailored for cars, motorcycles, electr
 
 <div class="insurance-card hidden">
 
-<i class="fa-solid fa-file-invoice-dollar"></i>
+<i class="fa-solid fa-house-chimney"></i>
 
-<h3>Car Insurance Quotes</h3>
+<h3>Homeowners Insurance</h3>
 
 <p>
-Compare real-time car insurance quotes from trusted providers and find affordable policies with collision, liability, and comprehensive coverage benefits.
+Protect your home structure, personal belongings, and liability risks with comprehensive homeowners insurance coverage plans.
 </p>
 
 </div>
 
 <div class="insurance-card hidden">
 
-<i class="fa-solid fa-motorcycle"></i>
+<i class="fa-solid fa-key"></i>
 
-<h3>Motorcycle Insurance</h3>
+<h3>Renters Insurance</h3>
 
 <p>
-Get specialized motorcycle coverage designed to protect riders against accidents, theft, medical expenses, and unexpected road emergencies.
+Secure your personal belongings, electronics, furniture, and liability protection while renting an apartment or home.
 </p>
 
 </div>
 
 <div class="insurance-card hidden">
 
-<i class="fa-solid fa-charging-station"></i>
+<i class="fa-solid fa-building"></i>
 
-<h3>EV Insurance</h3>
+<h3>Condo Insurance</h3>
 
 <p>
-Protect your electric vehicle with modern EV insurance plans covering battery systems, charging equipment, and advanced technology repairs.
+Get specialized condo coverage designed to protect your unit interiors, valuables, and personal liability against unexpected damages.
+</p>
+
+</div>
+
+<div class="insurance-card hidden">
+
+<i class="fa-solid fa-city"></i>
+
+<h3>Landlord Insurance</h3>
+
+<p>
+Protect rental properties against tenant-related damages, property loss, liability claims, and unexpected repair expenses.
+</p>
+
+</div>
+
+<div class="insurance-card hidden">
+
+<i class="fa-solid fa-fire-flame-curved"></i>
+
+<h3>Disaster Protection</h3>
+
+<p>
+Stay financially protected against fire, storms, theft, water damage, and other covered natural or accidental property risks.
 </p>
 
 </div>
@@ -590,34 +604,10 @@ Protect your electric vehicle with modern EV insurance plans covering battery sy
 
 <i class="fa-solid fa-scale-balanced"></i>
 
-<h3>Compare Auto Coverage</h3>
+<h3>Compare Home Coverage</h3>
 
 <p>
-Easily compare coverage limits, premiums, deductibles, add-ons, and insurer benefits to choose the best auto insurance plan for your needs.
-</p>
-
-</div>
-
-<div class="insurance-card hidden">
-
-<i class="fa-solid fa-road"></i>
-
-<h3>Roadside Assistance</h3>
-
-<p>
-Stay protected with emergency towing, flat tire support, fuel delivery, and 24/7 roadside help included in select insurance plans.
-</p>
-
-</div>
-
-<div class="insurance-card hidden">
-
-<i class="fa-solid fa-car-burst"></i>
-
-<h3>Accident Protection</h3>
-
-<p>
-Secure financial protection against vehicle damage, collisions, and unexpected repair costs with comprehensive accident coverage.
+Compare premiums, deductibles, property coverage limits, and insurer benefits to choose the best home insurance plan.
 </p>
 
 </div>
@@ -626,44 +616,68 @@ Secure financial protection against vehicle damage, collisions, and unexpected r
 
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- FEATURES -->
 
-<section class="process">
+<section class="features">
 
 <div class="section-title hidden">
 
-<h2>How Auto Insurance Comparison Works</h2>
+<h2>Why Choose Our Insurance Comparison</h2>
 
 <p>
-Compare plans in minutes and discover the best auto insurance coverage with a simple and transparent comparison experience.
+Find the right home insurance coverage faster with trusted providers, transparent comparisons, and modern digital tools.
 </p>
 
 </div>
 
-<div class="process-wrapper">
+<div class="feature-wrapper">
 
-<div class="process-box hidden">
-<div class="process-number">1</div>
-<h3>Enter Vehicle Details</h3>
+<div class="feature-box hidden">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Comparisons</h3>
+
 <p>
-Provide basic information about your car, bike, or EV to receive personalized insurance recommendations.
+Compare multiple insurance providers instantly and discover the best coverage options within minutes.
 </p>
+
 </div>
 
-<div class="process-box hidden">
-<div class="process-number">2</div>
-<h3>Compare Coverage</h3>
+<div class="feature-box hidden">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Secure Information</h3>
+
 <p>
-Review premiums, deductibles, benefits, and coverage options from leading insurance companies instantly.
+Your personal and property information remains protected with advanced data security and privacy standards.
 </p>
+
 </div>
 
-<div class="process-box hidden">
-<div class="process-number">3</div>
-<h3>Choose Your Plan</h3>
+<div class="feature-box hidden">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Affordable Premiums</h3>
+
 <p>
-Select the best auto insurance policy that matches your budget, driving habits, and protection needs.
+Find competitive home insurance rates designed to fit your budget without sacrificing important coverage benefits.
 </p>
+
+</div>
+
+<div class="feature-box hidden">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24/7 Expert Support</h3>
+
+<p>
+Get help anytime from insurance experts ready to guide you through policy comparisons and claim questions.
+</p>
+
 </div>
 
 </div>
@@ -674,10 +688,10 @@ Select the best auto insurance policy that matches your budget, driving habits, 
 
 <section class="cta hidden">
 
-<h2>Find The Right Auto Insurance Today</h2>
+<h2>Find The Right Home Insurance Today</h2>
 
 <p>
-Compare trusted auto insurance providers and discover affordable protection plans designed for safer driving and complete peace of mind.
+Compare trusted home insurance providers and discover affordable protection plans designed to keep your property and loved ones secure.
 </p>
 
 <a href="#">
@@ -696,6 +710,7 @@ entries.forEach((entry)=>{
 
 if(entry.isIntersecting){
 entry.target.classList.add('show');
+
 }
 
 });
@@ -704,7 +719,7 @@ entry.target.classList.add('show');
 
 const hiddenElements = document.querySelectorAll('.hidden');
 
-hiddenElements.forEach((el)=> observer.observe(el));
+hiddenElements.forEach((el)=>observer.observe(el));
 
 </script>
 

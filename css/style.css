@@ -1224,7 +1224,9 @@ header{
     transform: translateY(-5px);
 }
 
-
+.about-cta .heading-bx{
+    margin-bottom: 0;
+}
 
 /* ---- Life Insurance ---- */
 
@@ -1351,3 +1353,13 @@ animation:float 4s ease infinite;
     color: var(--white-color);
     font-weight: 600;
 }
+
+
+/* --- Auto insurance --- */
+
+.auto-stats-sec.stats .stat-items .stat-box {
+    padding: 1.5rem 0;
+}
+
+/* --- Home insurance --- */
+
