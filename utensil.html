@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Travel Insurance</title>
+<title>Business Insurance</title>
 
 <!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- FONT AWESOME -->
 <link rel="stylesheet"
@@ -20,7 +20,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Manrope',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -29,48 +33,50 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* BACKGROUND EFFECT */
+/* BACKGROUND */
 
-.bg-blur{
+.bg-light{
 position:fixed;
-width:500px;
-height:500px;
-background:#2563eb30;
+border-radius:50%;
 filter:blur(140px);
-top:-180px;
-left:-120px;
 z-index:-1;
 }
 
-.bg-blur2{
-position:fixed;
+.bg1{
 width:450px;
 height:450px;
-background:#7c3aed30;
-filter:blur(140px);
-bottom:-180px;
+background:#2563eb25;
+top:-150px;
+left:-120px;
+}
+
+.bg2{
+width:380px;
+height:380px;
+background:#7c3aed25;
+bottom:-120px;
 right:-120px;
-z-index:-1;
 }
 
 /* HERO SECTION */
 
 .hero{
+padding:90px 8%;
 min-height:100vh;
-padding:120px 8%;
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:70px;
 position:relative;
 }
 
-.hero-content{
-max-width:650px;
-animation:fadeUp 1s ease;
+.hero-wrapper{
+width:100%;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
 }
 
-.hero-badge{
+.hero-left span.badge{
 display:inline-flex;
 align-items:center;
 gap:10px;
@@ -78,261 +84,293 @@ padding:12px 18px;
 border-radius:50px;
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.08);
-margin-bottom:25px;
+margin-bottom:28px;
 font-size:14px;
 color:#cbd5e1;
 }
 
-.hero-content h1{
-font-size:70px;
-line-height:1.1;
+.hero-left h1{
+font-size:82px;
+line-height:1;
 margin-bottom:25px;
 font-weight:800;
 }
 
-.hero-content h1 span{
-background:linear-gradient(to right,#60a5fa,#a78bfa);
+.hero-left h1 span{
+background:linear-gradient(to right,#60a5fa,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.hero-content p{
+.hero-left p{
 font-size:18px;
 line-height:1.9;
 color:#cbd5e1;
-margin-bottom:35px;
+max-width:680px;
+margin-bottom:38px;
 }
 
-.hero-buttons{
+.hero-btns{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
 }
 
-.primary-btn{
-padding:16px 34px;
-border-radius:50px;
-background:linear-gradient(to right,#2563eb,#7c3aed);
-color:#fff;
+.hero-btns a{
 text-decoration:none;
+padding:16px 34px;
+border-radius:60px;
 font-weight:600;
 transition:.4s;
 }
 
-.primary-btn:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 30px rgba(124,58,237,.35);
+.btn-primary{
+background:linear-gradient(to right,#2563eb,#7c3aed);
+color:#fff;
 }
 
-.secondary-btn{
-padding:16px 34px;
-border-radius:50px;
+.btn-primary:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(124,58,237,.35);
+}
+
+.btn-secondary{
 border:1px solid rgba(255,255,255,0.15);
 color:#fff;
-text-decoration:none;
-transition:.4s;
 }
 
-.secondary-btn:hover{
-background:rgba(255,255,255,0.08);
+.btn-secondary:hover{
+background:rgba(255,255,255,0.06);
 }
 
-/* HERO CARD */
+/* RIGHT SIDE */
 
-.hero-card{
-width:400px;
-padding:42px;
-border-radius:32px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
+.hero-right{
 position:relative;
-overflow:hidden;
+height:620px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.main-circle{
+width:420px;
+height:420px;
+border-radius:50%;
+background:linear-gradient(145deg,#2563eb,#7c3aed);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+animation:pulse 5s infinite;
+box-shadow:0 20px 60px rgba(37,99,235,.3);
+}
+
+.main-circle i{
+font-size:90px;
+}
+
+.floating-box{
+position:absolute;
+padding:18px 22px;
+border-radius:22px;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+display:flex;
+align-items:center;
+gap:14px;
+min-width:220px;
+transition:.4s;
 animation:float 4s ease-in-out infinite;
 }
 
-.hero-card::before{
-content:'';
-position:absolute;
-width:220px;
-height:220px;
-background:#2563eb40;
-border-radius:50%;
-top:-100px;
-right:-90px;
+.floating-box:hover{
+transform:translateY(-8px);
 }
 
-.hero-card i{
-font-size:65px;
-margin-bottom:25px;
+.floating-box i{
+font-size:22px;
 color:#60a5fa;
 }
 
-.hero-card h3{
-font-size:32px;
-margin-bottom:18px;
+.floating-box h4{
+font-size:18px;
+margin-bottom:4px;
 }
 
-.hero-card p{
-line-height:1.9;
+.floating-box p{
+font-size:13px;
 color:#cbd5e1;
 }
 
-/* STATS */
-
-.stats{
-padding:0 8% 100px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+.box1{
+top:0;
+left:40px;
 }
 
-.stat-box{
-padding:35px;
-border-radius:26px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-text-align:center;
-transition:.4s;
+.box2{
+top:130px;
+right:0;
 }
 
-.stat-box:hover{
-transform:translateY(-10px);
+.box3{
+bottom:120px;
+left:0;
 }
 
-.stat-box h2{
-font-size:42px;
-margin-bottom:10px;
-background:linear-gradient(to right,#60a5fa,#a78bfa);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.stat-box p{
-color:#cbd5e1;
+.box4{
+bottom:0;
+right:50px;
 }
 
 /* SECTION */
 
 .section{
-padding:100px 8%;
+padding:120px 8%;
 }
 
-.section-title{
+.section-heading{
 text-align:center;
-margin-bottom:70px;
+margin-bottom:90px;
 }
 
-.section-title h2{
-font-size:50px;
-margin-bottom:18px;
+.section-heading h2{
+font-size:60px;
+margin-bottom:20px;
 }
 
-.section-title p{
+.section-heading p{
 max-width:760px;
 margin:auto;
 line-height:1.9;
 color:#cbd5e1;
 }
 
-/* CARD GRID */
+/* ZIGZAG LAYOUT */
 
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.zigzag-wrapper{
+display:flex;
+flex-direction:column;
+gap:90px;
 }
 
-.travel-card{
-padding:38px;
-border-radius:30px;
+.zigzag-item{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.zigzag-item:nth-child(even) .zigzag-image{
+order:2;
+}
+
+.zigzag-item:nth-child(even) .zigzag-content{
+order:1;
+}
+
+.zigzag-image{
+height:320px;
+border-radius:35px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+justify-content:center;
 position:relative;
 overflow:hidden;
-transition:.5s;
 }
 
-.travel-card::before{
+.zigzag-image::before{
 content:'';
 position:absolute;
-width:140px;
-height:140px;
-background:#7c3aed30;
+width:220px;
+height:220px;
+background:#2563eb25;
 border-radius:50%;
-top:-60px;
-right:-60px;
+top:-80px;
+right:-80px;
 }
 
-.travel-card:hover{
-transform:translateY(-12px);
-border-color:#7c3aed;
+.zigzag-image i{
+font-size:90px;
+color:#60a5fa;
+position:relative;
+z-index:2;
 }
 
-.travel-card i{
-font-size:52px;
+.zigzag-content h3{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.zigzag-content p{
+line-height:1.9;
+color:#cbd5e1;
 margin-bottom:25px;
+}
+
+.zigzag-content ul{
+list-style:none;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.zigzag-content ul li{
+display:flex;
+align-items:center;
+gap:12px;
+color:#dbeafe;
+}
+
+.zigzag-content ul li i{
 color:#60a5fa;
 }
 
-.travel-card h3{
-font-size:28px;
-margin-bottom:16px;
-}
+/* STATS */
 
-.travel-card p{
-line-height:1.9;
-color:#cbd5e1;
-}
-
-/* FEATURES */
-
-.features{
-padding:100px 8%;
-}
-
-.feature-wrapper{
+.stats{
+margin-top:120px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 }
 
-.feature-box{
+.stat{
 padding:35px;
 border-radius:28px;
-background:rgba(255,255,255,0.04);
+background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
+text-align:center;
 transition:.4s;
 }
 
-.feature-box:hover{
+.stat:hover{
 transform:translateY(-10px);
 }
 
-.feature-box i{
-font-size:42px;
-margin-bottom:20px;
-color:#60a5fa;
+.stat h2{
+font-size:52px;
+margin-bottom:10px;
+background:linear-gradient(to right,#60a5fa,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.feature-box h3{
-font-size:24px;
-margin-bottom:14px;
-}
-
-.feature-box p{
-line-height:1.8;
+.stat p{
 color:#cbd5e1;
 }
 
 /* CTA */
 
 .cta{
-margin:80px 8%;
-padding:80px;
-border-radius:36px;
+margin:100px 8%;
+padding:90px 60px;
+border-radius:40px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
 text-align:center;
-background:linear-gradient(to right,#2563eb,#7c3aed);
 position:relative;
 overflow:hidden;
 }
@@ -340,35 +378,41 @@ overflow:hidden;
 .cta::before{
 content:'';
 position:absolute;
-width:260px;
-height:260px;
-background:rgba(255,255,255,0.15);
+width:320px;
+height:320px;
+background:rgba(255,255,255,0.12);
 border-radius:50%;
-top:-120px;
-right:-90px;
+top:-140px;
+right:-100px;
 }
 
 .cta h2{
-font-size:48px;
+font-size:58px;
 margin-bottom:20px;
+position:relative;
+z-index:2;
 }
 
 .cta p{
-max-width:700px;
+max-width:760px;
 margin:auto;
 line-height:1.9;
 margin-bottom:35px;
+position:relative;
+z-index:2;
 }
 
 .cta a{
 display:inline-block;
-padding:16px 38px;
+padding:16px 40px;
 border-radius:50px;
 background:#fff;
 color:#111827;
 font-weight:700;
 text-decoration:none;
 transition:.4s;
+position:relative;
+z-index:2;
 }
 
 .cta a:hover{
@@ -379,7 +423,7 @@ transform:scale(1.05);
 
 .hidden{
 opacity:0;
-transform:translateY(50px);
+transform:translateY(70px);
 transition:1s;
 }
 
@@ -388,59 +432,101 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* ANIMATION */
+/* KEYFRAMES */
 
 @keyframes float{
+
 0%{
 transform:translateY(0);
 }
+
 50%{
-transform:translateY(-18px);
+transform:translateY(-15px);
 }
+
 100%{
 transform:translateY(0);
 }
+
 }
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
+@keyframes pulse{
+
+0%{
+transform:scale(1);
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+50%{
+transform:scale(1.03);
 }
+
+100%{
+transform:scale(1);
+}
+
 }
 
 /* RESPONSIVE */
 
-@media(max-width:950px){
+@media(max-width:1050px){
 
-.hero{
-flex-direction:column;
+.hero-wrapper{
+grid-template-columns:1fr;
+}
+
+.hero-left{
 text-align:center;
-padding-top:90px;
 }
 
-.hero-content h1{
-font-size:48px;
+.hero-left h1{
+font-size:56px;
 }
 
-.hero-buttons{
+.hero-btns{
 justify-content:center;
 }
 
-.hero-card{
-width:100%;
+.hero-right{
+height:auto;
+padding-top:40px;
 }
 
-.section-title h2{
-font-size:38px;
+.main-circle{
+width:320px;
+height:320px;
+}
+
+.floating-box{
+position:relative;
+margin-top:20px;
+left:auto;
+right:auto;
+top:auto;
+bottom:auto;
+}
+
+.zigzag-item{
+grid-template-columns:1fr;
+}
+
+.zigzag-item:nth-child(even) .zigzag-image{
+order:1;
+}
+
+.zigzag-item:nth-child(even) .zigzag-content{
+order:2;
+}
+
+.section-heading h2{
+font-size:42px;
+}
+
+.zigzag-content h3{
+font-size:34px;
 }
 
 .cta h2{
-font-size:36px;
+font-size:42px;
 }
 
 }
@@ -450,236 +536,234 @@ font-size:36px;
 
 <body>
 
-<div class="bg-blur"></div>
-<div class="bg-blur2"></div>
+<div class="bg-light bg1"></div>
+<div class="bg-light bg2"></div>
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-wrapper">
 
-<div class="hero-badge">
-<i class="fa-solid fa-plane-departure"></i>
-Trusted Travel Insurance Comparison
-</div>
+<div class="hero-left">
+
+<span class="badge">
+<i class="fa-solid fa-briefcase"></i>
+Business Insurance Comparison Platform
+</span>
 
 <h1>
-Travel Smarter With <span>Reliable Insurance</span> Coverage
+Protect Your <span>Business</span> From Every Risk
 </h1>
 
 <p>
-Compare affordable travel insurance plans designed to protect your trips, medical emergencies, baggage, and unexpected travel disruptions. Explore flexible international, student, and family travel coverage options from trusted providers.
+Compare trusted business insurance plans designed to protect your company from financial losses, cyber attacks, legal claims, employee-related risks, and operational disruptions. Explore flexible coverage options built for startups, agencies, enterprises, and growing businesses.
 </p>
 
-<div class="hero-buttons">
+<div class="hero-btns">
 
-<a href="#" class="primary-btn">
+<a href="#" class="btn-primary">
 Compare Plans
 </a>
 
-<a href="#" class="secondary-btn">
-Get Free Quote
+<a href="#" class="btn-secondary">
+Get Quote
 </a>
 
 </div>
 
 </div>
 
-<div class="hero-card">
+<div class="hero-right">
 
-<i class="fa-solid fa-earth-americas"></i>
+<div class="main-circle">
+<i class="fa-solid fa-building-shield"></i>
+</div>
 
-<h3>Worldwide Travel Protection</h3>
+<div class="floating-box box1">
+<i class="fa-solid fa-store"></i>
+<div>
+<h4>Small Business</h4>
+<p>Affordable protection plans</p>
+</div>
+</div>
 
-<p>
-Stay protected during every journey with coverage for medical emergencies, trip cancellations, lost baggage, and travel delays worldwide.
-</p>
+<div class="floating-box box2">
+<i class="fa-solid fa-scale-balanced"></i>
+<div>
+<h4>Liability Coverage</h4>
+<p>Protect against legal risks</p>
+</div>
+</div>
+
+<div class="floating-box box3">
+<i class="fa-solid fa-shield-halved"></i>
+<div>
+<h4>Cyber Security</h4>
+<p>Advanced digital protection</p>
+</div>
+</div>
+
+<div class="floating-box box4">
+<i class="fa-solid fa-users"></i>
+<div>
+<h4>Employee Benefits</h4>
+<p>Healthcare & wellness plans</p>
+</div>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat-box hidden">
-<h2>120+</h2>
-<p>Countries Covered Worldwide</p>
-</div>
-
-<div class="stat-box hidden">
-<h2>500K+</h2>
-<p>Travelers Protected</p>
-</div>
-
-<div class="stat-box hidden">
-<h2>24/7</h2>
-<p>Emergency Assistance Support</p>
-</div>
-
-<div class="stat-box hidden">
-<h2>98%</h2>
-<p>Claim Satisfaction Rate</p>
-</div>
-
-</section>
-
-<!-- INSURANCE TYPES -->
+<!-- SECTION -->
 
 <section class="section">
 
-<div class="section-title hidden">
+<div class="section-heading hidden">
 
-<h2>Travel Insurance Solutions</h2>
+<h2>
+Business Insurance Solutions
+</h2>
 
 <p>
-Explore comprehensive travel insurance plans tailored for international trips, students studying abroad, and families traveling together with peace of mind.
+Discover modern insurance solutions designed to protect businesses against financial uncertainty, operational risks, cyber threats, and workforce-related liabilities.
 </p>
 
 </div>
 
-<div class="card-grid">
+<div class="zigzag-wrapper">
 
-<div class="travel-card hidden">
+<!-- ITEM -->
 
-<i class="fa-solid fa-globe"></i>
+<div class="zigzag-item hidden">
 
-<h3>International Travel Insurance</h3>
+<div class="zigzag-image">
+<i class="fa-solid fa-store"></i>
+</div>
+
+<div class="zigzag-content">
+
+<h3>Small Business Insurance</h3>
 
 <p>
-Get worldwide protection for medical emergencies, trip cancellations, passport loss, and unexpected travel interruptions abroad.
+Protect your startup or small business against property damage, financial losses, liability claims, and unexpected operational interruptions with scalable and affordable insurance coverage.
 </p>
+
+<ul>
+<li><i class="fa-solid fa-check"></i> Property & equipment protection</li>
+<li><i class="fa-solid fa-check"></i> Business interruption coverage</li>
+<li><i class="fa-solid fa-check"></i> Affordable startup plans</li>
+</ul>
 
 </div>
 
-<div class="travel-card hidden">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-<h3>Student Travel Plans</h3>
-
-<p>
-Affordable travel insurance designed for students studying overseas with healthcare support, emergency assistance, and travel protection benefits.
-</p>
-
 </div>
 
-<div class="travel-card hidden">
+<!-- ITEM -->
 
-<i class="fa-solid fa-people-roof"></i>
+<div class="zigzag-item hidden">
 
-<h3>Family Travel Coverage</h3>
-
-<p>
-Protect your entire family during vacations with comprehensive travel coverage including medical support, baggage protection, and emergency care.
-</p>
-
-</div>
-
-<div class="travel-card hidden">
-
-<i class="fa-solid fa-suitcase-rolling"></i>
-
-<h3>Baggage Protection</h3>
-
-<p>
-Receive financial protection against delayed, lost, or stolen baggage and personal belongings during your journey.
-</p>
-
-</div>
-
-<div class="travel-card hidden">
-
-<i class="fa-solid fa-notes-medical"></i>
-
-<h3>Emergency Medical Coverage</h3>
-
-<p>
-Stay financially protected against unexpected illnesses, accidents, hospital stays, and emergency medical evacuations abroad.
-</p>
-
-</div>
-
-<div class="travel-card hidden">
-
+<div class="zigzag-image">
 <i class="fa-solid fa-scale-balanced"></i>
+</div>
 
-<h3>Compare Travel Plans</h3>
+<div class="zigzag-content">
+
+<h3>Professional Liability</h3>
 
 <p>
-Compare premiums, travel benefits, medical limits, and provider coverage options to choose the best travel insurance policy.
+Stay protected against negligence claims, legal disputes, professional mistakes, and client-related risks with comprehensive liability insurance solutions.
 </p>
+
+<ul>
+<li><i class="fa-solid fa-check"></i> Legal defense support</li>
+<li><i class="fa-solid fa-check"></i> Client dispute protection</li>
+<li><i class="fa-solid fa-check"></i> Industry-specific coverage</li>
+</ul>
 
 </div>
 
 </div>
 
-</section>
+<!-- ITEM -->
 
-<!-- FEATURES -->
+<div class="zigzag-item hidden">
 
-<section class="features">
+<div class="zigzag-image">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
 
-<div class="section-title hidden">
+<div class="zigzag-content">
 
-<h2>Why Choose Our Travel Insurance Comparison</h2>
+<h3>Cyber Insurance</h3>
 
 <p>
-Compare trusted travel insurance providers instantly and discover affordable coverage plans designed for safer and stress-free travel experiences.
+Protect your business from ransomware attacks, data breaches, phishing scams, and digital threats with modern cybersecurity insurance solutions.
 </p>
+
+<ul>
+<li><i class="fa-solid fa-check"></i> Data breach recovery support</li>
+<li><i class="fa-solid fa-check"></i> Ransomware protection</li>
+<li><i class="fa-solid fa-check"></i> Digital risk management</li>
+</ul>
 
 </div>
 
-<div class="feature-wrapper">
+</div>
 
-<div class="feature-box hidden">
+<!-- ITEM -->
 
-<i class="fa-solid fa-bolt"></i>
+<div class="zigzag-item hidden">
 
-<h3>Instant Comparisons</h3>
+<div class="zigzag-image">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<div class="zigzag-content">
+
+<h3>Employee Benefits Coverage</h3>
 
 <p>
-Quickly compare multiple travel insurance plans and find the best coverage options within minutes.
+Support employee wellbeing with healthcare benefits, disability protection, workplace wellness programs, and comprehensive employee insurance plans.
 </p>
+
+<ul>
+<li><i class="fa-solid fa-check"></i> Healthcare & wellness benefits</li>
+<li><i class="fa-solid fa-check"></i> Workplace injury support</li>
+<li><i class="fa-solid fa-check"></i> Employee retention advantages</li>
+</ul>
 
 </div>
 
-<div class="feature-box hidden">
-
-<i class="fa-solid fa-shield-heart"></i>
-
-<h3>Reliable Protection</h3>
-
-<p>
-Travel confidently with comprehensive coverage designed to protect your health, belongings, and travel expenses.
-</p>
+</div>
 
 </div>
 
-<div class="feature-box hidden">
+<!-- STATS -->
 
-<i class="fa-solid fa-wallet"></i>
+<div class="stats hidden">
 
-<h3>Affordable Plans</h3>
-
-<p>
-Discover budget-friendly travel insurance plans without compromising on important travel protection benefits.
-</p>
-
+<div class="stat">
+<h2>1M+</h2>
+<p>Businesses Protected</p>
 </div>
 
-<div class="feature-box hidden">
+<div class="stat">
+<h2>50+</h2>
+<p>Insurance Providers</p>
+</div>
 
-<i class="fa-solid fa-headset"></i>
+<div class="stat">
+<h2>24/7</h2>
+<p>Business Support</p>
+</div>
 
-<h3>24/7 Global Assistance</h3>
-
-<p>
-Get access to emergency travel assistance and expert support anytime, anywhere in the world.
-</p>
-
+<div class="stat">
+<h2>98%</h2>
+<p>Customer Satisfaction</p>
 </div>
 
 </div>
@@ -690,10 +774,12 @@ Get access to emergency travel assistance and expert support anytime, anywhere i
 
 <section class="cta hidden">
 
-<h2>Find The Right Travel Insurance Today</h2>
+<h2>
+Secure Your Business With Confidence
+</h2>
 
 <p>
-Compare trusted travel insurance providers and secure affordable worldwide protection for every journey, vacation, and adventure.
+Compare trusted business insurance providers and discover affordable protection plans designed for startups, agencies, enterprises, and growing companies.
 </p>
 
 <a href="#">
@@ -712,15 +798,22 @@ entries.forEach((entry)=>{
 
 if(entry.isIntersecting){
 entry.target.classList.add('show');
+
+}else{
+entry.target.classList.remove('show');
 }
 
 });
 
+},{
+threshold:0.2
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
 
-hiddenElements.forEach((el)=>observer.observe(el));
+hiddenElements.forEach((el)=>{
+observer.observe(el);
+});
 
 </script>
 
