@@ -175,6 +175,10 @@ a{
     right: -100px;
 }
 
+.bg-light{
+    background: #ebebeb;
+}
+
 /* --- Header --- */
 header{
     padding: 0.6rem 0;
@@ -1361,5 +1365,122 @@ animation:float 4s ease infinite;
     padding: 1.5rem 0;
 }
 
-/* --- Home insurance --- */
+/* --- Life insurance Quote from --- */
 
+.form-container{
+    padding: 2rem;
+    background: var(--white-color);
+    border-radius: 1rem;
+    box-shadow:  0 0 20px #ebebeb;
+}
+.form-group .input-field{
+    border: 1px solid rgb(196, 196, 196);
+    color: var(--font-colour);
+    padding-right: 3rem;
+}
+
+.input-icon {
+    color: rgb(196, 196, 196);   
+}
+
+.input-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.input-icon{
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    height: 100%;
+    width: 3.5rem;
+}
+
+.insurance-form .submit-btn{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background:var(--bg-purple-shade2);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+}
+
+.insurance-form .form-group select{
+    color: var(--font-colour);
+    border: 1px solid rgb(196, 196, 196);
+}
+.insurance-form .form-group select option{
+    background: var(--white-color);
+    color: var(--font-colour);
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.life-ins-qoute-content-card-bx{
+    position: relative;
+    z-index: 5;
+}
+
+.benefit-quote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.benefit-icon{
+    border: 1px solid var(--bg-purple-shade2);
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-purple-shade2);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+.quotes{
+    margin-top: 1rem;
+}
+
+.benefit-qotes-img img{
+    display: block;
+    margin: 1.3rem auto 0;
+    width: 100%;
+}
+
+.life-ins-info-img img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: var(--transition);
+}
+.life-ins-info-img:hover img{
+    transform: scale(1);
+}
+
+.benefit-info-content-bx ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.benefit-info-content-bx ul li span{
+    font-size: 1rem;
+    color: var(--bg-purple-shade2);
+}
+.benefit-info-content-bx{
+    background-image: linear-gradient(-13deg, transparent, #ebebeb);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+
+.benefit-info-content-bx:hover{
+    background-image: linear-gradient(13deg, transparent, #ebebeb);
+    box-shadow:  0 0 15px #ebebeb;
+}
+
+.health-ins-qote-sec .life-ins-qoute-content-bx .benefit-qotes-img img{
+    margin: 0;
+}
