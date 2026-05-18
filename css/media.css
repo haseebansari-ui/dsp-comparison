@@ -108,7 +108,7 @@
     }
 
     .about-cta .heading-bx h2{
-        font-size: 55px;
+        font-size: 40px;
         font-weight: 500;
     }
     .inner-banner-tag-line {
@@ -138,5 +138,8 @@
     }
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+    .about-left h2 {
+        font-size: 2rem;
     }
 }
