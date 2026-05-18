@@ -307,6 +307,25 @@ header{
     padding: 1rem 0;
 }
 
+.other-nav-link{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.header-quote-bx .get-quote{
+    padding: 0.5rem 1.5rem;
+    background: var(--bg-color-green-shade2);
+    color: var(--white-color);
+}
+
+.header-quote-bx .get-quote:hover{
+    background: var(--white-color);
+    color: var(--bg-color-green-shade2);
+}
+
+.menue-bar-bx{
+    display: none;
+}
 
 
 /* --- Hero section --- */
