@@ -65,4 +65,27 @@
         color: var(--white-color);
         font-size: 1.8rem;
     }
+    .about-left-content {
+        position: static;
+        margin-bottom: 3rem;
+    }
+    .inner-banner-tag-line{
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .hero-btn .quotes-btn{
+        margin-bottom: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 579px){
+
 }
