@@ -142,4 +142,7 @@
     .about-left h2 {
         font-size: 2rem;
     }
+    .hero-badge h3{
+        font-size: 25px;
+    }
 }
