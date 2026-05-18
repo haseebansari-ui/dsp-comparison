@@ -99,8 +99,29 @@
     .other-nav-link ul{
         top:65px;
     }
+    .hero-btn .get-quote{
+        width: 100%;
+    }
+    
 }
 
 @media screen and (max-width: 579px){
-
+    .quote-card{
+        padding: 22px 18px;
+    }
+    .header-quote-bx .get-quote {
+        padding: 0.5rem 1rem;
+    }
+    .heading-bx h2{
+        font-size: 2rem;
+    }
+    .heading-bx{
+        text-align: left;
+    }
+    .heading-bx br{
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 }
