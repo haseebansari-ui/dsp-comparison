@@ -25,7 +25,7 @@
     }
     .other-nav-link ul{
         position: fixed;
-        top: 68px;
+        top: 65px;
         right: 0;
         flex-direction: column;
         gap: 1rem;
@@ -75,6 +75,7 @@
     .inner-banner-tag-line{
         font-size: 55px;
     }
+    
 }
 
 @media screen and (max-width: 767px){
@@ -101,6 +102,14 @@
     }
     .hero-btn .get-quote{
         width: 100%;
+    }
+    .about-cta .heading-bx{
+        padding: 30px 20px;
+    }
+
+    .about-cta .heading-bx h2{
+        font-size: 55px;
+        font-weight: 500;
     }
     
 }
