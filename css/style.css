@@ -324,7 +324,7 @@ header{
 }
 
 .menue-bar-bx{
-    display: none;
+    display: block;
 }
 
 
