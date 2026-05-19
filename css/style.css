@@ -105,7 +105,7 @@ a{
     position: absolute;
     width: 140px;
     height: 140px;
-    background: rgba(124,77,255,.18);
+    background: rgb(217 216 219 / 24%);
     border-radius: 50%;
     top: -60px;
     right: -60px;
@@ -716,7 +716,7 @@ header{
     transition: .4s;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 20px #ebeb;
+    box-shadow: 0 0 20px var(--box-shadow);
 }
 .srv-content-bx::before {
     content: '';
@@ -770,7 +770,7 @@ header{
 .tab-btn.active{
     background: #074C3E;
     color: #fff;
-    box-shadow: 0 10px 30px rgba(89,32,197,.35);
+    box-shadow: 0 0 30px var(--box-shadow);
 }
 
 /* .tab-btn:hover{
@@ -826,7 +826,7 @@ header{
 .step-box{
     position: relative;
     padding: 2rem;
-    box-shadow: 0 0 20px #ebebeb;
+    box-shadow: 0 0 20px #d3d3d3;
     background: linear-gradient(180deg, #fbf7ff, #f9f8fc 45.31%, #f5f2f9);
     z-index: 1;
 }
