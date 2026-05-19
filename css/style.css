@@ -323,9 +323,9 @@ header{
     color: var(--bg-color-green-shade2);
 }
 
-/* .menue-bar-bx {
+.menue-bar-bx {
     display: none;
-} */
+}
 
 .menue-bar-bx .menue-show{
     display: none;
