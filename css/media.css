@@ -115,6 +115,23 @@
     .step-box{
         margin-bottom: 4rem;
     }
+
+    .menue-bar-bx{
+        display: block;
+    }
+    .other-nav-link{
+        gap: 0.5rem;
+    }
+
+    .life-ins-qoute-main-bx{
+        display: flex;
+    }
+    .form-ins-qoute-bx{
+        order: 2;
+    }
+    .life-ins-qoute-content-bx{
+        order: 1;
+    }
     
 }
 
@@ -148,6 +165,9 @@
     }
     .about-left h2 {
         font-size: 45px;
+    }
+    .life-ins-quote-content .heading-bx h2{
+        font-size: 40px;
     }
     
 }

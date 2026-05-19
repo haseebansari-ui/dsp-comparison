@@ -310,7 +310,7 @@ header{
 .other-nav-link{
     display: flex;
     align-items: center;
-    gap:0.5rem;
+    gap:2rem;
 }
 .header-quote-bx .get-quote{
     padding: 0.5rem 1.5rem;
@@ -324,7 +324,7 @@ header{
 }
 
 .menue-bar-bx{
-    display: block;
+    display: none;
 }
 
 
@@ -521,6 +521,10 @@ header{
 }
 .card-img{
     margin-bottom: 1rem;
+}
+.card-img span{
+    font-size: 3rem;
+    color: var(--bg-color-green-shade2);
 }
 .cards h6{
     font-size: 1.3rem;
@@ -1313,11 +1317,11 @@ animation:float 4s ease infinite;
     background: none;
     justify-content: inherit;
     font-size: 3rem;
-    color: var(--bg-purple-shade1);
+    color: var(--bg-color-green-shade2);
     transition: var(--transition);
 }
 
-.life-ins-items .offer-card:hover .offer-icon{
+.life-ins-items .offer-card:hover h3{
     color: var(--bg-color-green-shade2);
 }
 
@@ -1420,6 +1424,10 @@ animation:float 4s ease infinite;
 
 /* --- Life insurance Quote from --- */
 
+.life-ins-quote-container .form-container h2{
+    color: var(--bg-color-green-shade2);
+}
+
 .form-container{
     padding: 2rem;
     background: var(--white-color);
@@ -1454,7 +1462,7 @@ animation:float 4s ease infinite;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background:var(--bg-purple-shade2);
+    background:var(--bg-color-green-shade2);
     color: var(--white-color);
     border-radius: 0.5rem;
 }
@@ -1481,14 +1489,14 @@ animation:float 4s ease infinite;
     gap: 1.5rem;
 }
 .benefit-icon{
-    border: 1px solid var(--bg-purple-shade2);
+    border: 1px solid var(--bg-color-green-shade2);
     height: 60px;
     width: 60px;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-purple-shade2);
+    color: var(--bg-color-green-shade2);
     margin-left: 1rem;
     font-weight: bold;
     font-size: 1.3rem;
@@ -1520,17 +1528,17 @@ animation:float 4s ease infinite;
 }
 .benefit-info-content-bx ul li span{
     font-size: 1rem;
-    color: var(--bg-purple-shade2);
+    color: var(--bg-color-green-shade2);
 }
 .benefit-info-content-bx{
-    background-image: linear-gradient(-13deg, transparent, #ebebeb);
+    background-image: linear-gradient(-13deg, transparent, rgba(103, 173, 159, 0.26));
     padding: 1rem;
     border-radius: 0.5rem;
     transition: var(--transition);
 }
 
 .benefit-info-content-bx:hover{
-    background-image: linear-gradient(13deg, transparent, #ebebeb);
+    background-image: linear-gradient(13deg, transparent, rgba(103, 173, 159, 0.26));
     box-shadow:  0 0 15px #ebebeb;
 }
 
