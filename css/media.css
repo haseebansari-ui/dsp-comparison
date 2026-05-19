@@ -65,7 +65,18 @@
         display: block;
     }
 
-    .menue-bar-bx{
+    /* .menue-bar-bx {
+        display: block;
+    } */
+
+    .menue-bar-bx .menue-show{
+        display: block;
+    }
+    .menue-bar-bx.active .menue-show{
+        display: none;
+    }
+
+    .menue-bar-bx.active .menue-close{
         display: block;
     }
     .menue-bar-bx span{
