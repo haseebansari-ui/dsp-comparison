@@ -53,8 +53,9 @@ menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("active");
 });
 
-const innerMenuBarOpen = document.querySelector(".other-nav-link ul .drop-down-bx .drop-down-menue");
+
 const innerMenuToggle = document.querySelector(".inner-menue");
+const innerMenuBarOpen = document.querySelector(".other-nav-link ul .drop-down-bx .drop-down-menue");
 
 innerMenuToggle.addEventListener("click", () => {
     innerMenuBarOpen.classList.toggle("active");

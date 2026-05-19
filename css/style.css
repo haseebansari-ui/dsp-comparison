@@ -414,7 +414,7 @@ header{
     outline: none;
 }
 .form-group select option{
-    background: #1c113b;
+    background: var(--bg-color-green-shade2);
     color: #fff;
 }
 
