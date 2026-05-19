@@ -1553,3 +1553,116 @@ animation:float 4s ease infinite;
     margin: 0;
 }
 
+/* --- contact us page */
+
+.contact-input-field{
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(196, 196, 196);
+    color: var(--font-colour);
+    padding-right: 3rem;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 1rem;
+    outline: none;
+}
+
+.contact-input-field::placeholder{
+    color: #777;
+}
+
+.contact-input-field-bx {
+    margin-bottom: 2rem;
+}
+
+.contact-input-field-bx label{
+    display: block;
+}
+
+.contact-input-field-bx select{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid rgb(196, 196, 196);
+    color: var(--font-colour);
+    padding: 18px;
+    border-radius: 12px;
+    outline: none;
+    color: #777;
+}
+
+.contact-input-field-bx select option{
+    color: #777;
+}
+
+.text-area label{
+    display: block;
+}
+
+.text-area textarea{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid rgb(196, 196, 196);
+    color: var(--font-colour);
+    padding: 18px;
+    border-radius: 12px;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.text-area textarea::placeholder{
+    color: #777;
+}
+
+.contact-form-bx {
+      box-shadow: 0 0 20px var(--box-shadow);
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+}
+.contact-form-bx .submit-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    background: var(--bg-color-green-shade2);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    width: 180px;
+}
+
+.contact-form-bx .heading-bx h2{
+    text-align: left;
+    font-size: 2rem;
+}
+
+.info-content-main-bx{
+    box-shadow: 0 0 20px var(--box-shadow);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.info-content-main-bx .heading-bx h2{
+    text-align: left;
+    font-size: 2rem;
+}
+
+.info-content-bx{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.info-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 1px solid var(--bg-color-green-shade2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-icon i{
+    font-size: 2rem;
+    color: var(--bg-color-green-shade2);
+}

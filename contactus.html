@@ -58,37 +58,90 @@
 <!-- Contact us Hero Section -->
  <section class="contact-sec sec-padding">
     <div class="container">
+        
         <div class="row">
             <div class="col-lg-8">
                 <div class="contact-form-bx">
+                    <div class="heading-bx">
+                        <h2>Get in touch with us</h2>
+                    </div>
                     <form action="#">
                         <div class="row">
                             <div class="contact-input-field-bx col-lg-6">
                                 <label for="name" class="required">Name</label>
-                                <input type="text" id="name" name="name" required class="contact-input-field"/>
+                                <input type="text" id="name" name="name" required placeholder="Enter Your Name" class="contact-input-field"/>
                             </div>
                             <div class="contact-input-field-bx col-lg-6">
-                                <label for="name" class="required">Name</label>
-                                <input type="text" id="name" name="name" required class="contact-input-field">
+                                <label for="email" class="required">Email</label>
+                                <input type="mail" id="email" name="email" required placeholder="Enter Your Email" class="contact-input-field">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="contact-input-field-bx col-lg-6">
-                                <label for="name" class="required">Name</label>
-                                <input type="text" id="name" name="name" required class="contact-input-field"/>
+                                <label for="mobile" class="required">Mobile no.</label>
+                                <input type="text" id="mobile" name="mobile" required placeholder="Enter Your Mobile no." class="contact-input-field"/>
                             </div>
                             <div class="contact-input-field-bx col-lg-6">
-                                <label for="name" class="required">Name</label>
-                                <input type="text" id="name" name="name" required class="contact-input-field">
+                                <label for="country" class="required">Country</label>
+                                <select name="country" id="country" required>
+                                    <option value="">Country...</option>    
+                                    <option value="">United States</option>
+                                    <option value="">Australia</option>
+                                    <option value="">Canada</option>
+                                    <option value="">France</option>
+                                </select>
                             </div>
                         </div>
-
+                        <div class="text-area">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" cols="50" maxlength="150" placeholder="Enter Your Message..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn mt-3">Send Message <i class="fas fa-paper-plane"></i> </button>
                     </form>
                 </div>
             </div>
 
-            <div class="contact-info-bx col-lg-8"></div>
+            <div class="contact-info-bx col-lg-4">
+                <div class="info-content-main-bx">
+                    <div class="heading-bx">
+                    <h2>Get in touch with us</h2>
+                </div>
+                    <div class="info-content-bx">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Call Now</h3>
+                            <p>
+                                <a href="tel:+910000000000">000-000-0000</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-content-bx">
+                        <div class="info-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Address</h3>
+                            <p>
+                                <a href="#">info@example.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-content-bx">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>
+                                <a href="#">Royal Ln. Mesa, New Jersey 45463</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
  </section>
@@ -120,7 +173,7 @@
 							<ul class="links">
 								<li> <a href="about.html"> About us </a> </li>
 								<li> <a href="privacy.html"> Privacy Policy </a> </li>
-								<li> <a href="contact.html"> Contact us </a> </li>
+								<li> <a href="contactus.html"> Contact us </a> </li>
 							</ul>
 						</div>
 					</div>
@@ -146,7 +199,7 @@
 					<div class="col-lg-5">
 						<div class="foot-links text-lg-end mt-5 mt-lg-0">
 							<a href="faq.html"> FAQ's </a>
-							<a href="contact.html"> Contact Us </a>
+							<a href="contactus.html"> Contact Us </a>
 						</div>
 					</div>
 				</div>
