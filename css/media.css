@@ -147,6 +147,13 @@
     .contact-form-bx{
         margin-bottom: 2rem;
     }
+
+    .process-sec{
+        background-position: 5% 50%;
+    }
+
+    .tool-sec{background-size: 100%;}
+
     
 }
 
@@ -183,6 +190,10 @@
     }
     .life-ins-quote-content .heading-bx h2{
         font-size: 40px;
+    }
+
+    .process-sec {
+        background-position: 27% 50%;
     }
     
 }

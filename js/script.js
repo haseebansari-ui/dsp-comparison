@@ -44,6 +44,7 @@ tabBtns.forEach(btn => {
 
 });
 
+// Mobile menue
 
 const menuBarOpen = document.querySelector(".other-nav-link ul");
 const menuToggle = document.querySelector(".menue-bar-bx");

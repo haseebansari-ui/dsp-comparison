@@ -3,16 +3,15 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Business Insurance</title>
-
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
 
 <style>
 
@@ -33,48 +32,83 @@ color:#fff;
 overflow-x:hidden;
 }
 
-.other-nav-link ul{
+/* TAB WRAPPER */
+
+.compare-tabs{
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 60px;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(16px);
+}
+
+/* TAB BUTTON */
+
+.tab-btn{
+    border: none;
+    outline: none;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: .35s ease;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tab-btn.active{
+    background: #074C3E;
+    color: #fff;
+    box-shadow: 0 0 30px var(--box-shadow);
+}
+
+.tab-btn i{
+    font-size: 1.2rem;
+}
+
+/* MOBILE SCROLL TABS */
+
+@media(max-width:768px){
+
+.compare-tabs{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+
+    /* SNAP */
+    scroll-snap-type: x mandatory;
+}
+
+/* HIDE SCROLLBAR */
+
+.compare-tabs::-webkit-scrollbar{
     display:none;
 }
 
-/* OPEN MENU */
-.other-nav-link ul.active{
-    display:block;
+.compare-tabs{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
 }
 
-/* ICON STYLE */
-.menu-toggle{
-    cursor:pointer;
-    font-size:28px;
-    position:relative;
-    width:30px;
-    height:30px;
+.tab-btn{
+    scroll-snap-align: center;
+    min-width: max-content;
 }
 
-/* BOTH ICONS */
-.menu-toggle i{
-    position:absolute;
-    transition:.3s ease;
-}
-
-/* CLOSE ICON HIDDEN DEFAULT */
-.close-icon{
-    opacity:0;
-    visibility:hidden;
-    transform:rotate(90deg);
-}
-
-/* ACTIVE STATE */
-.menu-toggle.active .menu-icon{
-    opacity:0;
-    visibility:hidden;
-    transform:rotate(90deg);
-}
-
-.menu-toggle.active .close-icon{
-    opacity:1;
-    visibility:visible;
-    transform:rotate(0);
 }
 
 
@@ -84,19 +118,212 @@ overflow-x:hidden;
 
 <body>
 
+<section class="compare-category-section sec-padding">
+        <div class="container">
+            <div class="heading-bx">
+                <h2>Explore Comparison Categories</h2>
+                <p>
+                    Compare insurance plans and home improvement services
+                    from trusted providers in one smart platform.
+                </p>
+            </div>
+
+        <!-- TAB BUTTONS -->
+
+        <div class="compare-tabs">
+            <button class="tab-btn active" data-tab="life-tab">
+                <i class="fa-solid fa-shield-heart"></i>
+                Life Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="health-tab">
+                <i class="fa-solid fa-heart"></i>
+                Health Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="auto-tab">
+                <i class="fa-solid fa-car"></i>
+                Auto Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="home-tab">
+                <i class="fa-regular fa-house"></i>
+                Home Insurance
+            </button>
+
+             <button class="tab-btn" data-tab="travel-tab">
+                <i class="fa-solid fa-plane-departure"></i>
+                Travel Insurance
+            </button>
+
+            <button class="tab-btn" data-tab="business-tab">
+                <i class="fa-regular fa-building"></i>
+                Business Insurance
+            </button>
+
+        </div>
+
+
+        <!-- Life Insurance TAB -->
+        
+        <div class="tab-content active" id="life-tab">   
+            <div class="srvc-main-container">
+                <div class="service-card">
+                    <div class="srv-content-bx">
+                        <h3>Life Insurance</h3>
+                        <p>
+                            Smart life protection plans with AI-powered recommendations.
+                        </p>
+                        <ul>
+                            <li>Term Life Insurance</li>
+                            <li>Whole Life Insurance</li>
+                            <li>Universal Life Insurance</li>
+                            <li>No Medical Exam Plans</li>
+                            <li>Life Insurance Calculator</li>
+                        </ul>
+                        <div class="quotes-btn">
+                            <a href="#" class="get-quote">Get Free Quotes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Health Insurance TAB -->
+
+        <div class="tab-content" id="health-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Health Insurance</h3>
+                    <p>
+                        Compare affordable health plans from trusted carriers.
+                    </p>
+                    <ul>
+                        <li>Individual Health Plans</li>
+                        <li>Family Coverage</li>
+                        <li>Dental & Vision</li>
+                        <li>Critical Illness Plans</li>
+                        <li>Compare Health Quotes</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Auto Insurance TAB -->
+         <div class="tab-content" id="auto-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Auto Insurance</h3>
+                    <p>
+                        Get car, EV, and motorcycle insurance in minutes.
+                    </p>
+                    <ul>
+                        <li>Car Insurance Quotes</li>
+                        <li>Motorcycle Insurance</li>
+                        <li>EV Insurance</li>
+                        <li>Compare Auto Coverage</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Tab -->
+
+        <div class="tab-content" id="home-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Home</h3>
+                    <p>
+                        Protect your property and travel with customized coverage.
+                    </p>
+                    <ul>
+                        <li>Homeowners Insurance</li>
+                        <li>Renters Insurance</li>
+                        <li>International Travel Insurance</li>
+                        <li>Family Travel Coverage</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Travel Tab -->
+
+        <div class="tab-content" id="travel-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Travel</h3>
+                    <p>
+                        Protect your property and travel with customized coverage.
+                    </p>
+                    <ul>
+                        <li>International Travel Insurance</li>
+                        <li>Student Travel Plans</li>
+                        <li>Family Travel Coverage</li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Tab -->
+
+        <div class="tab-content" id="business-tab">
+            <div class="service-card">
+                <div class="srv-content-bx">
+                    <h3>Business</h3>
+                    <p>
+                        Protect your property and travel with customized coverage.
+                    </p>
+                    <ul>
+                        <li>Small Business Insurance</li>
+                        <li>Professional Liability</li>
+                        <li>Cyber Insurance </li>
+                        <li>Employee Benefits Coverage </li>
+                    </ul>
+                    <div class="quotes-btn">
+                        <a href="#" class="get-quote">Get Free Quotes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </section>
+
+
 
 <!-- JAVASCRIPT -->
 
 <script>
 
-const menuBar = document.querySelector(".other-nav-link ul");
-const menuToggle = document.querySelector(".menu-toggle");
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-menuToggle.addEventListener("click", () => {
+tabBtns.forEach(btn => {
 
-    menuBar.classList.toggle("active");
+    btn.addEventListener('click', () => {
 
-    menuToggle.classList.toggle("active");
+        btn.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
+        });
+
+    });
 
 });
 
