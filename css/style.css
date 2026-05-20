@@ -272,7 +272,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
+    gap: 0rem;
     visibility: hidden;
     opacity: 0;
     transform: scaleY(0);
@@ -291,13 +291,14 @@ header{
     width: 100%;
 }
 .other-nav-link ul .drop-down-bx .drop-down-menue li a{
-    color: var(--font-colour);
+    color: var(--white-color);
+    background: var(--bg-color-green-shade2);
     padding: .5rem 0 .5rem 1rem;
     display: block;
 }
 .other-nav-link ul .drop-down-bx .drop-down-menue li a:hover{
-    background: var(--bg-color-green-shade2);
-    color: var(--white-color);
+    background: var(--white-color);
+    color: var(--bg-color-green-shade2);
 }
 
 .other-nav-link ul li a.drop-down-btn{
@@ -598,7 +599,7 @@ header{
     border-radius: 1rem;
 }
 .counter-img-bx{
-    padding: 1rem;
+    padding: 0.5rem;
     background: var(--white-color);
     border-radius: 1rem;
     background: var(--bg-color-green-shade2);
@@ -771,7 +772,7 @@ header{
     transition: .4s;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 20px var(--box-shadow);
+    box-shadow: 0 0 20px #c5c4c4;
 }
 .srv-content-bx::before {
     content: '';
@@ -830,6 +831,7 @@ header{
     font-size: 1.3rem;
 }
 
+
 /* TAB CONTENT */
 
 .tab-content{
@@ -868,6 +870,18 @@ header{
     transform: translateY(-5px);
     background: var(--bg-color-green-shade2);
     color: var(--white-color);
+}
+.tab-img-bx {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    overflow: hidden;
+    background: var(--bg-color-green-shade2);
+    position: relative;
+    z-index: 3;
+}
+.tab-img-bx img{
+    width: 100%;
+    border-radius: 1rem;
 }
 
 /* --- Process Section --- */
@@ -941,6 +955,8 @@ header{
     color: var(--bg-color-green-shade2);
     /* color: var(--white-color); */
 }
+
+
 
 /* --- Footer --- */
 .footer-sec{
