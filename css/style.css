@@ -1809,3 +1809,56 @@ animation:float 4s ease infinite;
 .home-inn-process .step-box{
     z-index: 4;
 }
+
+/* --- Quotation form --- */
+
+.quotation-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-bx{
+    width: 500px;
+}
+.quotation-form .form-bx .quote-card h3{
+    color: var(--font-colour);
+}
+
+.quotation-form .form-bx .form-group select{
+    color: var(--font-colour);
+}
+.quotation-form .form-bx .form-group select option{
+    color: var(--font-colour);
+    background: var(--white-color);
+}
+
+.quotation-form .form-bx .form-group input::placeholder{
+    color: var(--font-colour);
+}
+.quotation-form .form-bx .form-group textarea::placeholder{
+    color: var(--font-colour);
+}
+.quotation-form .form-bx .form-group input, .quotation-form .form-bx .form-group textarea, .quotation-form .form-bx .form-group select{
+    color: var(--font-colour);
+    border: 1px solid #b1b1b1;
+} 
+
+.quotation-form .form-bx .quote-card{
+    box-shadow: 0 0 20px #cccccc;
+}
+
+.form-bx .btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    border: none;
+    outline: none;
+    color:var(--white-color);
+    background: var(--bg-color-green-shade2) !important;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    font-family: "Cuprum", sans-serif;
+    font-size: 1.2rem;
+}
