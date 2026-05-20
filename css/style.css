@@ -364,7 +364,7 @@ header{
     background-size: cover;
     z-index: -1;
 }
-.hero-sec::after{
+/* .hero-sec::after{
     content: '';
     position: absolute;
     top: 0;
@@ -374,7 +374,7 @@ header{
     background-size: cover;
     background: rgba(3 33 27 / 86%);
     z-index: 2;
-}
+} */
 .hero-content{
     margin-top:5rem;
 }
@@ -1385,6 +1385,18 @@ header{
 .about-cta .heading-bx{
     margin-bottom: 0;
 }
+
+.offer-card-bx a{
+    display: block;
+}
+.offer-card-bx a .offer-icon{
+    color: var(--font-colour);
+}
+
+.offer-card-bx a h3{
+    color: var(--font-colour);
+}
+
 
 /* ---- Life Insurance ---- */
 
