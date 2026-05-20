@@ -915,12 +915,10 @@ header{
 
 .process-sec .heading-bx{
     margin-bottom: 6rem;
-}
-
-.process-sec .heading-bx {
     color: var(--white-color);
+    position: relative;
+    z-index: 4;
 }
-
 .step-box{
     position: relative;
     padding: 2rem;
@@ -1560,6 +1558,10 @@ animation:float 4s ease infinite;
 
 /* --- Auto insurance --- */
 
+.auto-inn-process .step-box{
+    z-index: 3;
+}
+
 .auto-stats-sec.stats .stat-items .stat-box {
     padding: 1.5rem 0;
 }
@@ -1800,4 +1802,10 @@ animation:float 4s ease infinite;
 .info-icon i{
     font-size: 1.5rem;
     color: var(--bg-color-green-shade2);
+}
+
+/* --- Home Insurance inner page --- */
+
+.home-inn-process .step-box{
+    z-index: 4;
 }
