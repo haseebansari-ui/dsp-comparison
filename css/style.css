@@ -336,6 +336,11 @@ header{
     display: none;
 }
 
+.product-links .fsz-18 {
+    font-size: 25px;
+    color: var(--white-shade2);
+}
+
 /* --- Hero section --- */
 .hero-sec{
     /* background-image:  linear-gradient(180deg,var(--bg-purple-shade1) 0%, var(--bg-purple-shade2) 40%, var(--bg-purple-shade3) 100%); */
@@ -882,6 +887,21 @@ header{
 .tab-img-bx img{
     width: 100%;
     border-radius: 1rem;
+}
+
+.tab-ins-content-bx h3{
+    font-size: 2rem;
+}
+
+.tabers-main-bx{
+        display: flex;
+}
+.tab-ins-content-bx{
+    order: 2;
+    padding-left: 3rem;
+}
+.tab-img-bx{
+    order: 1;
 }
 
 /* --- Process Section --- */
@@ -1817,7 +1837,7 @@ animation:float 4s ease infinite;
     align-items: center;
     justify-content: center;
 }
-.form-bx{
+.quotation-form .form-bx{
     width: 500px;
 }
 .quotation-form .form-bx .quote-card h3{

@@ -154,7 +154,14 @@
 
     .tool-sec{background-size: cover;}
 
-    
+    .tab-img-bx{
+        order: 1;
+        margin-bottom: 3rem;
+    }
+    .counter-img-bx{
+        margin-bottom: 3rem;
+    }
+
 }
 
 @media screen and (max-width: 767px){
