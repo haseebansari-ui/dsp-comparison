@@ -236,6 +236,10 @@
     .benefit-quote{
         gap: 1rem;
     }
+
+    .footer-sec .mb-sm-4{
+        margin-bottom: 2rem;
+    }
 }
 
 
