@@ -1031,7 +1031,7 @@ header{
     color: var(--btn-hover-color);
 }
 .cr-dark1:hover{
-    color: var(--bg-purple-shade2);
+    color: var(--btn-hover-color);
 }
 .foot-links{
     display: flex;
