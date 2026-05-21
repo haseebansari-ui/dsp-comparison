@@ -155,11 +155,13 @@
     .tool-sec{background-size: cover;}
 
     .tab-img-bx{
-        order: 1;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     .counter-img-bx{
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+    }
+    .tab-ins-content-bx{
+        padding-left: 0;
     }
 
 }
