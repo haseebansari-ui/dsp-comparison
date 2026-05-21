@@ -449,8 +449,7 @@ header{
     outline: none;
 }
 .form-group select option{
-    background: var(--bg-color-green-shade2);
-    color: #fff;
+    color: var(--font-colour);
 }
 
 .form-group input::placeholder{
