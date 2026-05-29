@@ -1881,3 +1881,32 @@ animation:float 4s ease infinite;
     font-family: "Cuprum", sans-serif;
     font-size: 1.2rem;
 }
+
+
+/* --- Sign Up Form --- */
+
+.sginup-field-bx input{
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 1rem;
+    line-height: 45px;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+}
+.submit-btn{
+    display: block;
+    line-height: 45px;
+    background: var(--bg-color-green-shade2);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+}
+
+.signup-container-bx{
+    width: 500px;
+    margin: 5rem auto 0;
+}
+.signup-container-bx h6{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
