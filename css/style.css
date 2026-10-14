@@ -203,14 +203,10 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
+.logo img{
+    width: 215px;
 }
-.logo:hover{
-    color: var(--white-color);
-}
+
 .nav-links-bx{
     display: flex;
     align-items: center;
@@ -253,9 +249,6 @@ header{
 .other-nav-link ul li .get-quote:hover{
     background: var(--white-color);
     color: var(--bg-color-green-shade2);
-}
-.logo img{
-    width: 180px;
 }
 
 .drop-down-bx{
