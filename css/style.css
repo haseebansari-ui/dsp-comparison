@@ -187,16 +187,17 @@ a{
 
 /* --- Header --- */
 header{
-    /* padding: 0.6rem 0; */
-    background:var(--bg-color-green-shade);
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.747);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
     /* background: #E0F7EF; */
-    border-bottom: 1px solid var(--bg-purple-shade1);
     position:sticky;
     top:0;
     z-index:1000;
     /* background:rgba(15,10,31,.92); */
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid #ccc;
 }
 .nav-container{
     display: flex;
@@ -231,7 +232,7 @@ header{
     gap: 2rem;
 }
 .other-nav-link ul li a{
-    color: var(--white-color);
+    color:var(--bg-color-green-shade2);
     transition: var(--transition);
 }
 .other-nav-link ul li a:hover{
@@ -316,6 +317,7 @@ header{
 .header-quote-bx .get-quote:hover{
     background: var(--white-color);
     color: var(--bg-color-green-shade2);
+    border: 1px solid var(--bg-color-green-shade2);
 }
 
 .menue-bar-bx {
@@ -332,7 +334,7 @@ header{
 
 .product-links .fsz-18 {
     font-size: 25px;
-    color: var(--white-shade2);
+    color: var(--bg-color-green-shade2);
 }
 
 /* --- Hero section --- */
@@ -971,8 +973,13 @@ header{
 
 /* --- Footer --- */
 .footer-sec{
-    background: var(--bg-color-green-shade);
+    /* background: var(--bg-color-green-shade); */
+    background: linear-gradient(140deg, rgb(84 138 127 / 14%) 0%, rgba(226, 226, 226, 0.432) 50%, rgb(253 192 101 / 19%) 100%);
     padding-top: 5rem;
+}
+
+.ft-logo img{
+    width: 230px;
 }
 
 .links{
@@ -982,7 +989,7 @@ header{
 }
 
 .links li a{
-    color: var(--white-color);
+    color: var(--bg-color-green-shade2);
     transition: var(--transition);
     position: relative;
 }
@@ -1009,7 +1016,7 @@ header{
 }
 
 .links-group h6{
-    color: var(--white-shade2);
+    color: var(--bg-color-green-shade2);
 }
 
 .foot{
@@ -1019,7 +1026,8 @@ header{
     margin-top: 2rem;
 }
 .copy-right{
-    color: var(--white-shade2);
+    color: var(--bg-color-green-shade2);
+    text-align: center;
 }
 .cr-dark1{
     color: var(--btn-hover-color);
