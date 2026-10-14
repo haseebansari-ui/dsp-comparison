@@ -1923,3 +1923,11 @@ animation:float 4s ease infinite;
 .quotation-body header{
     border-bottom: none;
 }
+
+.signup-body header{
+    border-bottom: none;
+}
+
+.signup-sec.sec-padding{
+    padding: 0;
+}
