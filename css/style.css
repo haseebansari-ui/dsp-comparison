@@ -189,6 +189,7 @@ a{
 header{
     padding: 0.6rem 0;
     background:var(--bg-color-green-shade);
+    /* background: #E0F7EF; */
     border-bottom: 1px solid var(--bg-purple-shade1);
     position:sticky;
     top:0;
@@ -253,8 +254,8 @@ header{
     background: var(--white-color);
     color: var(--bg-color-green-shade2);
 }
-.logo{
-    color: var(--white-color);
+.logo img{
+    width: 180px;
 }
 
 .drop-down-bx{
