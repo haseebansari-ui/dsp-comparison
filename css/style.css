@@ -1917,3 +1917,9 @@ animation:float 4s ease infinite;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
+
+/* ---- additional CSS ---- */
+
+.quotation-body header{
+    border-bottom: none;
+}
