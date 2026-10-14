@@ -187,7 +187,7 @@ a{
 
 /* --- Header --- */
 header{
-    padding: 0.6rem 0;
+    /* padding: 0.6rem 0; */
     background:var(--bg-color-green-shade);
     /* background: #E0F7EF; */
     border-bottom: 1px solid var(--bg-purple-shade1);
@@ -204,7 +204,7 @@ header{
     justify-content: space-between;
 }
 .logo img{
-    width: 215px;
+    width: 200px;
 }
 
 .nav-links-bx{
