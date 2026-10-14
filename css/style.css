@@ -312,6 +312,7 @@ backdrop-filter: blur(10px);
     padding: 0.5rem 1.5rem;
     background: var(--bg-color-green-shade2);
     color: var(--white-color);
+    border: 1px solid transparent;
 }
 
 .header-quote-bx .get-quote:hover{
