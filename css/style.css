@@ -189,8 +189,8 @@ a{
 header{
     padding: 0.5rem 0;
     background: rgba(255, 255, 255, 0.747);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     /* background: #E0F7EF; */
     position:sticky;
     top:0;
@@ -335,7 +335,8 @@ backdrop-filter: blur(10px);
 
 .product-links .fsz-18 {
     font-size: 25px;
-    color: var(--bg-color-green-shade2);
+    /* color: var(--bg-color-green-shade2); */
+    color: #535454;
 }
 
 /* --- Hero section --- */
@@ -397,7 +398,7 @@ backdrop-filter: blur(10px);
 }
 
 .hero-btn .get-quote{
-    width: 180px;
+    width: 240px;
     padding: 1rem 0;
     background: var(--bg-color-green-shade2);
     color: var(--white-color);
@@ -409,16 +410,22 @@ backdrop-filter: blur(10px);
 .hero-btn .get-quote:hover{
     transform: translateY(-4px);
 }
-.explore-btn .get-quote{
-    border: 1px solid rgba(255, 255, 255, .2);
-    background: rgba(255, 255, 255, .05);
+.hero-btn .explore-btn{
+    border: 1px  solid rgba(255, 255, 255, .2);
+    background: rgba(75, 75, 75, 0.349);
     backdrop-filter: blur(14px);
     color: var(--white-color);
+    width: 180px;
 }
 
+.hero-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .quote-card {
-    background: rgba(255, 255, 255, .08);
+    background: rgb(80 80 80 / 36%);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, .1);
     padding: 35px;
@@ -539,12 +546,14 @@ backdrop-filter: blur(10px);
     width: 60%;
 }
 .cards{
-    padding: 2rem;
+    padding: 1rem 2rem;
     position: relative;
     z-index: 1;
     border-radius: 1rem;
     overflow: hidden;
     background: linear-gradient(180deg, #fbf7ff, #f9f8fc 45.31%, #f5f2f9);
+    height: 320px;
+
 }
 .cards::after{
     content: '';
@@ -570,7 +579,7 @@ backdrop-filter: blur(10px);
     margin-bottom: 1rem;
 }
 
-.choose-us-sec .heading-bx h2{
+.choose-us-sec .heading-bx {
     margin-bottom: 3rem;
 }
 
@@ -581,18 +590,35 @@ backdrop-filter: blur(10px);
 
 .counter-content{
     text-align: center;
-    box-shadow: 0 0 20px #ebebeb;
+    box-shadow: 0 0 20px #48474740;
     border: 1px solid #fff;
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 1.8rem;
+    border-radius: 1.2rem;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .counter-content h6{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg-color-green-shade2);
 }
 .counter-content p{
     font-size: 1.1rem;
+    margin: 0;
+}
+
+.counter-img-position{
+    position: relative;
+}
+
+.counter-img-bx{
+    position: sticky;
+    top:100px;
+    left:0;
+    
 }
 
 .counter-img-bx img{
@@ -617,7 +643,7 @@ backdrop-filter: blur(10px);
 }
 .accordian {
 	margin-bottom: 1.5rem;
-	max-width: 900px;
+	max-width: 715px;
 	margin: 0 auto 1.5rem;
 }
 
@@ -861,7 +887,7 @@ backdrop-filter: blur(10px);
 }
 
 .tab-content .quotes-btn .get-quote{
-    width: 170px;
+    width: 270px;
     margin-top: 1rem;
     background: var(--bg-color-green-shade);
     color: var(--white-color);
@@ -895,9 +921,36 @@ backdrop-filter: blur(10px);
 .tab-ins-content-bx{
     order: 2;
     padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .tab-img-bx{
     order: 1;
+}
+
+.tab-ins-content-bx ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-ins-content-bx ul li{
+    position: relative;
+    padding-left: 10px;
+    color: #747474;
+}
+
+.tab-ins-content-bx ul li::after{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: -4px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #c9c6c6;
 }
 
 /* --- Process Section --- */
@@ -1017,7 +1070,8 @@ backdrop-filter: blur(10px);
 }
 
 .links-group h6{
-    color: var(--bg-color-green-shade2);
+    /* color: var(--bg-color-green-shade2); */
+    color: #535454;
 }
 
 .foot{
@@ -1031,7 +1085,8 @@ backdrop-filter: blur(10px);
     text-align: center;
 }
 .cr-dark1{
-    color: var(--btn-hover-color);
+    /* color: var(--btn-hover-color); */
+    color: #ff9700;
 }
 .cr-dark1:hover{
     color: var(--btn-hover-color);
@@ -1108,6 +1163,11 @@ backdrop-filter: blur(10px);
     position: relative;
     z-index: 2;
     box-shadow: 0 0 20px #ebebeb;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tool-box h3{
@@ -1279,7 +1339,7 @@ backdrop-filter: blur(10px);
 }
 .about-left-content{
     position: sticky;
-    top: 0;
+    top: 120px;
     left: 0;
     width: 100%;
 }
