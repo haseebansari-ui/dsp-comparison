@@ -426,7 +426,7 @@ header{
 }
 
 .quote-card {
-    background: rgb(80 80 80 / 36%);
+    background: rgb(233 230 230 / 36%);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, .1);
     padding: 35px;
@@ -1998,6 +1998,7 @@ animation:float 4s ease infinite;
 .quotation-form .form-bx .quote-card{
     box-shadow: 0 0 20px #cccccc;
 }
+
 
 .form-bx .btn-submit{
     display: flex;
