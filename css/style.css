@@ -1815,8 +1815,6 @@ animation:float 4s ease infinite;
     height: 60px;
 }
 
-
-
 .benefit-info-content-bx ul li span{
     font-size: 1rem;
     color: var(--bg-color-green-shade2);
@@ -2140,9 +2138,6 @@ animation:float 4s ease infinite;
   margin: 0;
 }
 
-
-
-
 /* ----- About Why choose us ----- */
 .why-choose-us-section{
     background-color: #f8fafc;
@@ -2230,4 +2225,17 @@ animation:float 4s ease infinite;
   color: #64748b;
   line-height: 1.6;
   margin: 0;
+}
+
+/* ---- Home Insurance info content section ---- */
+
+.sub-para-title h3{
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.hm-cnct-mt{
+    margin-bottom: 2rem;
 }
