@@ -184,6 +184,27 @@
     .benefit-info-content-bx ul li{
         height: auto;
     }
+
+    .life-ins-benefit-bx .heading-bx{
+        text-align: center;
+    }
+
+    .health-ins-benefit-bx .heading-bx{
+        text-align: center;
+    }
+
+    .auto-ins-benefit-bx .heading-bx{
+        text-align: center;
+    }
+
+    .home-ins-benefit-bx .heading-bx{
+        text-align: center;
+    }
+
+    .travel-ins-benefit-bx .heading-bx{
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 767px){
