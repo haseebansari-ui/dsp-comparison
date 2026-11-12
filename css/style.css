@@ -1851,6 +1851,12 @@ animation:float 4s ease infinite;
     text-align: center;
 }
 
+.life-ins-info-img-bx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* --- contact us page */
 
 .contact-input-field{
