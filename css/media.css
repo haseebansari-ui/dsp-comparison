@@ -166,6 +166,9 @@
         padding-left: 0;
     }
 
+    .offer-section .heading-bx p{
+        width: 100%;
+    }
 
 
 }
@@ -264,7 +267,13 @@
     }
 }
 
-
+@media screen and (max-width: 579px){
+    .hero-badge{
+        min-width: 270px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
 
 
 
