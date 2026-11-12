@@ -170,6 +170,17 @@
         width: 100%;
     }
 
+    .mini-tag{
+        display: block;
+        margin: 25px auto;
+        width: 277px;
+        text-align: center;
+    }
+
+    .life-ins-info-content{
+        text-align: center;
+    }
+
 
 }
 
@@ -275,5 +286,8 @@
     }
 }
 
+@media screen and (max-width: 480px){
+    
+}
 
 

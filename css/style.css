@@ -1847,6 +1847,10 @@ animation:float 4s ease infinite;
     margin-bottom: 0.5rem;
 }
 
+.life-ins-quote-content .heading-bx h2{
+    text-align: center;
+}
+
 /* --- contact us page */
 
 .contact-input-field{
