@@ -233,7 +233,7 @@ header{
     gap: 2rem;
 }
 .other-nav-link ul li a{
-    color:var(--bg-color-green-shade2);
+    color: var(--bg-color-green-shade2);
     transition: var(--transition);
 }
 .other-nav-link ul li a:hover{
@@ -340,6 +340,10 @@ header{
     color: #535454;
 }
 
+.sm-menue-quote{
+    display:none;
+}
+
 /* --- Hero section --- */
 .hero-sec{
     /* background-image:  linear-gradient(180deg,var(--bg-purple-shade1) 0%, var(--bg-purple-shade2) 40%, var(--bg-purple-shade3) 100%); */
@@ -423,6 +427,7 @@ header{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .quote-card {
@@ -644,7 +649,7 @@ header{
 }
 .accordian {
 	margin-bottom: 1.5rem;
-	max-width: 715px;
+	max-width: 800px;
 	margin: 0 auto 1.5rem;
 }
 
