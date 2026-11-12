@@ -181,7 +181,9 @@
         text-align: center;
     }
 
-
+    .benefit-info-content-bx ul li{
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 767px){
