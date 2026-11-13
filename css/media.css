@@ -173,7 +173,8 @@
     .mini-tag{
         display: block;
         margin: 25px auto;
-        width: 277px;
+        /* width: 277px; */
+        max-width: fit-content;
         text-align: center;
     }
 
