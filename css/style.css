@@ -369,7 +369,8 @@ header{
     height: 100%;
     width: 100%;
     /* background-image: url(../img/heroimg1.jpg); */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3
+    )),
             url("../img/heroimg1.jpg") center center / cover no-repeat;
     background-size: cover;
     z-index: -1;
@@ -828,7 +829,7 @@ header{
     margin-bottom: 2rem;
 }
 
-.compare-tabs{
+/* .compare-tabs{
     width: fit-content;
     margin: 0 auto 60px;
     padding: 10px;
@@ -839,7 +840,46 @@ header{
     align-items: center;
     gap: 12px;
     backdrop-filter: blur(16px);
+} */
+
+
+.compare-tabs {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 60px;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    backdrop-filter: blur(16px);
+
+    /* Horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+.compare-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.compare-tabs .tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+
 
 .tab-btn{
     border: none;
