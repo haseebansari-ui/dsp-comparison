@@ -57,6 +57,7 @@ a{
 }
 .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .heading-bx h2{
@@ -64,6 +65,7 @@ a{
     font-weight: 600;
     margin-bottom: 1rem;
 }
+
 
 .heading-bx h2 span{
     color: var(--bg-purple-shade2);
@@ -866,7 +868,7 @@ header{
     -webkit-overflow-scrolling: touch;
 
     /* Hide scrollbar */
-    scrollbar-width: none;
+    scrollbar-width: block;
     -ms-overflow-style: none;
 }
 
@@ -1423,6 +1425,7 @@ header{
 
 .offer-section .mini-tag{
     box-shadow: 0 0 10px var(--white-color);
+    margin: 0 auto 25px;
 }
 
 .offer-section .heading-bx p{
