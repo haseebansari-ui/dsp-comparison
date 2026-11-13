@@ -1425,7 +1425,7 @@ header{
 
 .offer-section .mini-tag{
     box-shadow: 0 0 10px var(--white-color);
-    margin: 0 auto 25px;
+    margin: 0 auto 25px ;
 }
 
 .offer-section .heading-bx p{
