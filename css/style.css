@@ -369,7 +369,7 @@ header{
     height: 100%;
     width: 100%;
     /* background-image: url(../img/heroimg1.jpg); */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
             url("../img/heroimg1.jpg") center center / cover no-repeat;
     background-size: cover;
     z-index: -1;
