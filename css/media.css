@@ -217,6 +217,28 @@
     text-align: center;
     }
 
+    .about-hero-content h2{
+        text-align: center;
+    }
+
+    .about-hero-content p{
+        text-align: center;
+    }
+
+    .hero-badge-wrap {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-left-content h2{
+        text-align: center;
+    }
+
+    .about-left-content p{
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 767px){

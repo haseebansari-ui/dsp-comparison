@@ -56,7 +56,6 @@ a{
     color: var(--white-color);
 }
 .heading-bx{
-    text-align: center;
     margin-bottom: 3rem;
 }
 
@@ -1169,7 +1168,7 @@ header{
     position: relative;
     z-index: 2;
     box-shadow: 0 0 20px #ebebeb;
-    height: 280px;
+    height: 290px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1177,14 +1176,10 @@ header{
 }
 
 .tool-box h3{
-    /* color: var(--white-color);
-    color: var(--font-colour); */
-    margin-bottom: 1rem;
-}
-/* .tool-box p{
-    color: var(--white-color);
     color: var(--font-colour);
-} */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
 
 .tool-item{
     margin-bottom: 2rem;
