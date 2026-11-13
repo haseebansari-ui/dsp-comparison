@@ -205,6 +205,18 @@
         text-align: center;
     }
 
+    .heading-bx{
+        text-align: center;
+    }
+
+    .cards{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -276,9 +288,7 @@
     .heading-bx h2{
         font-size: 2rem;
     }
-    .heading-bx{
-        text-align: left;
-    }
+    
     .heading-bx br{
         display: none;
     }
