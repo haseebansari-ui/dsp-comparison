@@ -937,7 +937,7 @@ header{
 
 .tab-content .quotes-btn .get-quote{
     width: 270px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     background: var(--bg-color-green-shade);
     color: var(--white-color);
     padding: 0.8rem;
