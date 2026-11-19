@@ -1,483 +1,1096 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/media.css"/>    
+    <title>Terms & Conditions | DSP</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+/* ==============================
+   GLOBAL STYLING
+============================== */
+
+:root {
+    --primary-color: #800080;
+    --secondary-color: #c73e9b;
+    --dark-color: #24202a;
+    --text-color: #62616b;
+    --light-bg: #faf8fc;
+    --border-color: #ece8ef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background: #fff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   TERMS BANNER
+============================== */
+
+.terms-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 0 80px;
+    background:
+        radial-gradient(circle at 85% 20%,
+        rgba(199, 62, 155, .22), transparent 30%),
+        linear-gradient(120deg, #390339, #800080 65%, #5e145e);
+    color: #fff;
+}
+
+.terms-banner::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    right: -100px;
+    top: -200px;
+}
+
+.terms-banner::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+    right: 100px;
+    bottom: -220px;
+}
+
+.terms-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.banner-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f4b6e4;
+    margin-bottom: 15px;
+}
+
+.terms-banner h1 {
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: -1.5px;
+}
+
+.terms-banner p {
+    font-size: 16px;
+    color: rgba(255,255,255,.78);
+    max-width: 560px;
+    margin-bottom: 25px;
+}
+
+.breadcrumb-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.breadcrumb-main a {
+    color: #f4b6e4;
+}
+
+.breadcrumb-main i {
+    font-size: 10px;
+    color: rgba(255,255,255,.5);
+}
+
+.breadcrumb-main span {
+    color: #fff;
+}
+
+
+/* ==============================
+   MAIN SECTION
+============================== */
+
+.terms-main-sec {
+    padding: 75px 0 90px;
+    background: var(--light-bg);
+}
+
+
+/* ==============================
+   INTRO BOX
+============================== */
+
+.terms-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px 30px;
+    margin-bottom: 40px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+.terms-intro-icon {
+    min-width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(128,0,128,.08);
+    color: var(--primary-color);
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.terms-intro h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.terms-intro p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.updated-date {
+    font-size: 12px;
+    color: #92909a;
+}
+
+.updated-date i {
+    margin-right: 5px;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.terms-sidebar {
+    position: sticky;
+    top: 25px;
+    padding: 25px 20px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+.sidebar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 18px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: var(--dark-color);
+}
+
+.sidebar-heading i {
+    color: var(--primary-color);
+    font-size: 17px;
+}
+
+.terms-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0;
+}
+
+.terms-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #696572;
+    transition: all .3s ease;
+}
+
+.terms-nav a span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #aaa4b0;
+    min-width: 20px;
+}
+
+.terms-nav a:hover,
+.terms-nav a.active {
+    background: rgba(128,0,128,.07);
+    color: var(--primary-color);
+}
+
+.terms-nav a.active span {
+    color: var(--primary-color);
+}
+
+
+/* ==============================
+   SIDEBAR HELP
+============================== */
+
+.sidebar-help {
+    padding: 20px;
+    background: linear-gradient(135deg, #390339, #800080);
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.help-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.15);
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.sidebar-help h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.sidebar-help p {
+    font-size: 12px;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 13px;
+}
+
+.sidebar-help a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sidebar-help a i {
+    transition: transform .3s ease;
+}
+
+.sidebar-help a:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   TERMS CONTENT
+============================== */
+
+.terms-content {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 40px;
+}
+
+.terms-item {
+    position: relative;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 100px;
+}
+
+.terms-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.terms-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 13px;
+    border-radius: 8px;
+    background: rgba(128,0,128,.08);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.terms-item h2 {
+    font-size: 21px;
+    font-weight: 750;
+    color: var(--dark-color);
+    margin-bottom: 14px;
+    letter-spacing: -.4px;
+}
+
+.terms-item p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-color);
+    margin-bottom: 13px;
+}
+
+.terms-item p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-item a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.terms-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 17px;
+}
+
+.terms-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.terms-list li::before {
+    content: "\f00c";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 11px;
+    color: var(--primary-color);
+}
+
+
+/* ==============================
+   CONTACT INFORMATION
+============================== */
+
+.contact-info-box {
+    padding: 22px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.contact-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info-item > span {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 17px;
+}
+
+.contact-info-item small {
+    display: block;
+    color: #93909b;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.contact-info-item p {
+    color: var(--dark-color);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* ==============================
+   BOTTOM NOTE
+============================== */
+
+.terms-bottom-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    background: rgba(128,0,128,.055);
+    border: 1px solid rgba(128,0,128,.12);
+    border-radius: 10px;
+}
+
+.terms-bottom-note i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-top: 2px;
+}
+
+.terms-bottom-note p {
+    font-size: 13px;
+    color: #62536a;
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 991px) {
+
+    .terms-banner {
+        padding: 65px 0;
+    }
+
+    .terms-main-sec {
+        padding: 55px 0;
+    }
+
+    .terms-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .terms-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .terms-content {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .terms-banner {
+        padding: 55px 0;
+    }
+
+    .terms-banner h1 {
+        font-size: 34px;
+    }
+
+    .terms-banner p {
+        font-size: 14px;
+    }
+
+    .terms-main-sec {
+        padding: 35px 0 55px;
+    }
+
+    .terms-intro {
+        padding: 20px;
+        gap: 14px;
+        margin-bottom: 25px;
+    }
+
+    .terms-intro-icon {
+        min-width: 43px;
+        height: 43px;
+        font-size: 19px;
+    }
+
+    .terms-intro h2 {
+        font-size: 17px;
+    }
+
+    .terms-intro p {
+        font-size: 12px;
+    }
+
+    .terms-sidebar {
+        padding: 18px 14px;
+    }
+
+    .terms-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .terms-nav a {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .terms-content {
+        padding: 22px 17px;
+    }
+
+    .terms-item h2 {
+        font-size: 18px;
+    }
+
+    .terms-item p,
+    .terms-list li {
+        font-size: 13px;
+    }
+
+    .terms-item {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+
+    .contact-info-box {
+        padding: 15px;
+    }
+
+    .terms-bottom-note {
+        padding: 15px;
+    }
+}
+
+    </style>
+
 </head>
 <body>
 
-    <header>
+    <!-- Terms Banner -->
+    <section class="terms-banner">
         <div class="container">
-            <div class="nav-container">
-                <div class="nav-links-bx">
-                    <div class="logo-bx">
-                       <a href="index.html" class="logo"> <img src="./img/logo3.png" alt="logo"/> </a>
-                     </div>
-                </div>
-                <div class="other-nav-link">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li class="drop-down-bx">
-                            <a href="#" class="drop-down-btn inner-menue">Insurance <span><i class="fa-solid fa-angle-down"></i></span></a>
-                            <ul class="drop-down-menue">
-                                <li><a href="lifeinsurancequote.html">Life Insurance</a></li>
-                                <li><a href="healthinsurancequote.html">Health Insurance</a></li>
-                                <li><a href="autoinsurancequote.html">Auto Insurance</a></li>
-                                <li><a href="homeinsurancequote.html">Home Insurance</a></li>
-                                <li><a href="travelinsurancequote.html">Travel Insurance</a></li>
-                                <li><a href="businessinsurancequote.html">Business Insurance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="sginup.html">Sign in</a></li>
-                    </ul>
-                    <div class="header-quote-bx">
-                        <a href="quotationform.html" class="get-quote">Get a Quote <span><i class="fa-solid fa-angle-right"></i></span></a>
-                    </div>
-                    <div class="menue-bar-bx">
-                        <span class="menue-show">
-                            <i class="fa-solid fa-bars"></i>
-                        </span>
-                        <span class="menue-close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </span>
-                    </div>
+            <div class="terms-banner-content">
+                <span class="banner-tag">LEGAL INFORMATION</span>
+                <h1>Terms & Conditions</h1>
+                <p>
+                    Understanding our terms helps create a transparent,
+                    secure, and reliable experience for everyone.
+                </p>
+
+                <div class="breadcrumb-main">
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span>Terms & Conditions</span>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
 
-<!-- PAGE HERO -->
-<section class="legal-hero">
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fa-solid fa-angle-right"></i>
-            <span>Terms & Conditions</span>
-        </div>
+    <!-- Terms Content -->
+    <section class="terms-main-sec">
+        <div class="container">
 
-        <div class="legal-hero-content">
-            <span class="eyebrow">
-                <i class="fa-solid fa-file-contract"></i>
-                LEGAL INFORMATION
-            </span>
-
-            <h1>Terms & <span>Conditions</span></h1>
-
-            <p>
-                Please review our terms carefully to understand
-                the rules and guidelines for using DSP Comparison.
-            </p>
-
-            <div class="updated-date">
-                <i class="fa-regular fa-calendar"></i>
-                Last Updated: November 13, 2026
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- TERMS CONTENT -->
-<section class="legal-section">
-    <div class="container legal-layout">
-
-        <!-- SIDEBAR -->
-        <aside class="legal-sidebar">
-            <div class="sidebar-inner">
-                <h3>On This Page</h3>
-
-                <a href="#introduction" class="active">01. Introduction</a>
-                <a href="#services">02. Our Services</a>
-                <a href="#eligibility">03. Eligibility</a>
-                <a href="#responsibilities">04. User Responsibilities</a>
-                <a href="#insurance">05. Insurance Comparisons</a>
-                <a href="#providers">06. Third-Party Providers</a>
-                <a href="#quotes">07. Quotes & Estimates</a>
-                <a href="#intellectual">08. Intellectual Property</a>
-                <a href="#liability">09. Limitation of Liability</a>
-                <a href="#availability">10. Website Availability</a>
-                <a href="#privacy">11. Privacy</a>
-                <a href="#external">12. External Links</a>
-                <a href="#updates">13. Changes to Terms</a>
-                <a href="#governing">14. Governing Law</a>
-                <a href="#contact">15. Contact Information</a>
-            </div>
-        </aside>
-
-
-        <!-- MAIN CONTENT -->
-        <div class="legal-content">
-
-            <div class="legal-intro">
-                <div class="intro-icon">
+            <div class="terms-intro">
+                <div class="terms-intro-icon">
                     <i class="fa-solid fa-file-shield"></i>
                 </div>
 
-                <h2>Welcome to DSP Comparison</h2>
-
-                <p>
-                    These Terms & Conditions explain the rules,
-                    responsibilities, and guidelines that apply
-                    when you access or use our website and services.
-                </p>
+                <div>
+                    <h2>Welcome to Our Website</h2>
+                    <p>
+                        Please read these Terms & Conditions carefully before
+                        accessing or using our website and services.
+                    </p>
+                    <span class="updated-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        Last Updated: November 19, 2026
+                    </span>
+                </div>
             </div>
 
 
-            <article class="legal-card" id="introduction">
-                <span class="section-number">01</span>
-                <h2>Introduction</h2>
+            <div class="row g-4">
 
-                <p>
-                    Welcome to DSP Comparison. These Terms & Conditions
-                    govern your access to and use of our website and
-                    services. By accessing or using our website,
-                    you agree to comply with these terms.
-                </p>
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <aside class="terms-sidebar">
 
-                <p>
-                    If you do not agree with any part of these terms,
-                    please discontinue using our website.
-                </p>
-            </article>
+                        <div class="sidebar-heading">
+                            <span>ON THIS PAGE</span>
+                            <i class="fa-solid fa-list-ul"></i>
+                        </div>
 
+                        <nav class="terms-nav">
+                            <a href="#introduction" class="active">
+                                <span>01</span> Introduction
+                            </a>
 
-            <article class="legal-card" id="services">
-                <span class="section-number">02</span>
-                <h2>About Our Services</h2>
+                            <a href="#services">
+                                <span>02</span> About Our Services
+                            </a>
 
-                <p>
-                    DSP Comparison provides an online platform that
-                    helps users explore insurance options, compare
-                    available information, and request quotes.
-                </p>
+                            <a href="#eligibility">
+                                <span>03</span> Eligibility
+                            </a>
 
-                <ul>
-                    <li>Life Insurance</li>
-                    <li>Health Insurance</li>
-                    <li>Auto Insurance</li>
-                    <li>Home Insurance</li>
-                    <li>Travel Insurance</li>
-                    <li>Business Insurance</li>
-                    <li>Home Improvement Services</li>
-                </ul>
-            </article>
+                            <a href="#responsibilities">
+                                <span>04</span> User Responsibilities
+                            </a>
 
+                            <a href="#insurance">
+                                <span>05</span> Insurance Information
+                            </a>
 
-            <article class="legal-card" id="eligibility">
-                <span class="section-number">03</span>
-                <h2>Eligibility</h2>
+                            <a href="#third-party">
+                                <span>06</span> Third-Party Providers
+                            </a>
 
-                <p>By using this website, you confirm that:</p>
+                            <a href="#quotes">
+                                <span>07</span> Quotes & Enquiries
+                            </a>
 
-                <ul>
-                    <li>You are at least 18 years old or have required legal authorization.</li>
-                    <li>The information you provide is accurate and complete.</li>
-                    <li>You will use the website only for lawful purposes.</li>
-                    <li>You are legally permitted to use the services available.</li>
-                </ul>
-            </article>
+                            <a href="#intellectual">
+                                <span>08</span> Intellectual Property
+                            </a>
 
+                            <a href="#liability">
+                                <span>09</span> Limitation of Liability
+                            </a>
 
-            <article class="legal-card" id="responsibilities">
-                <span class="section-number">04</span>
-                <h2>User Responsibilities</h2>
+                            <a href="#availability">
+                                <span>10</span> Website Availability
+                            </a>
 
-                <p>When using our website, you agree not to:</p>
+                            <a href="#privacy">
+                                <span>11</span> Privacy & Data Protection
+                            </a>
 
-                <ul>
-                    <li>Submit false or misleading information.</li>
-                    <li>Use the website for fraudulent activities.</li>
-                    <li>Attempt unauthorized access to our systems.</li>
-                    <li>Disrupt or interfere with website functionality.</li>
-                    <li>Copy or distribute website content without permission.</li>
-                </ul>
-            </article>
+                            <a href="#external">
+                                <span>12</span> External Links
+                            </a>
 
+                            <a href="#changes">
+                                <span>13</span> Changes to Terms
+                            </a>
 
-            <article class="legal-card" id="insurance">
-                <span class="section-number">05</span>
-                <h2>Insurance Information and Comparisons</h2>
+                            <a href="#governing">
+                                <span>14</span> Governing Law
+                            </a>
 
-                <p>
-                    Information available on DSP Comparison is provided
-                    for general informational and comparison purposes.
-                </p>
+                            <a href="#contact">
+                                <span>15</span> Contact Information
+                            </a>
+                        </nav>
 
-                <ul>
-                    <li>Coverage and premiums may vary by provider.</li>
-                    <li>Quotes and estimates are not guaranteed final prices.</li>
-                    <li>Actual policy terms are determined by the insurer.</li>
-                    <li>Coverage exclusions and limitations apply.</li>
-                    <li>Users should review official policy documents before purchasing.</li>
-                </ul>
-
-                <p>
-                    Unless expressly stated otherwise, DSP Comparison
-                    does not issue insurance policies or guarantee
-                    insurance coverage.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="providers">
-                <span class="section-number">06</span>
-                <h2>Third-Party Providers and Services</h2>
-
-                <p>
-                    Our website may connect users with third-party
-                    insurance providers, agents, contractors, or
-                    service professionals.
-                </p>
-
-                <p>
-                    Any agreement or transaction entered into with
-                    a third party is subject to that provider's
-                    own terms and conditions.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="quotes">
-                <span class="section-number">07</span>
-                <h2>Quotes and Estimates</h2>
-
-                <p>
-                    Quotes, premiums, and estimates displayed through
-                    our platform are subject to verification by the
-                    relevant provider. Submitting a quote request
-                    does not guarantee approval, coverage, or service
-                    availability.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="intellectual">
-                <span class="section-number">08</span>
-                <h2>Intellectual Property</h2>
-
-                <p>
-                    Website content, including text, graphics, logos,
-                    designs, icons, and images, is owned by or licensed
-                    to DSP Comparison unless otherwise stated.
-                </p>
-
-                <p>
-                    You may not reproduce, distribute, or commercially
-                    use website materials without prior written permission.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="liability">
-                <span class="section-number">09</span>
-                <h2>Limitation of Liability</h2>
-
-                <p>
-                    To the extent permitted by applicable law,
-                    DSP Comparison shall not be liable for:
-                </p>
-
-                <ul>
-                    <li>Errors or inaccuracies in third-party information.</li>
-                    <li>Decisions based on general website information.</li>
-                    <li>Losses arising from third-party products or services.</li>
-                    <li>Temporary website interruptions or technical issues.</li>
-                    <li>Unauthorized access beyond our reasonable control.</li>
-                </ul>
-
-                <p>
-                    Nothing in these terms excludes liability that
-                    cannot legally be excluded under applicable law.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="availability">
-                <span class="section-number">10</span>
-                <h2>Website Availability</h2>
-
-                <p>
-                    We aim to keep our website available and functioning
-                    properly. However, we do not guarantee uninterrupted
-                    access and reserve the right to modify, suspend,
-                    or discontinue website features where reasonably necessary.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="privacy">
-                <span class="section-number">11</span>
-                <h2>Privacy and Data Protection</h2>
-
-                <p>
-                    Your use of our website is also governed by
-                    our Privacy Policy. Information submitted
-                    through our forms may be processed and shared
-                    with relevant providers where applicable
-                    and authorized.
-                </p>
-
-                <a href="privacy-policy.html" class="legal-text-link">
-                    Read Our Privacy Policy
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </article>
-
-
-            <article class="legal-card" id="external">
-                <span class="section-number">12</span>
-                <h2>Third-Party Links</h2>
-
-                <p>
-                    Our website may contain links to external websites
-                    for additional information or services. We are
-                    not responsible for the content, security, or
-                    privacy practices of external websites.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="updates">
-                <span class="section-number">13</span>
-                <h2>Changes to These Terms</h2>
-
-                <p>
-                    We reserve the right to revise or update these
-                    Terms & Conditions at any time. Updated terms
-                    will be published on this page with a revised
-                    Last Updated date.
-                </p>
-            </article>
-
-
-            <article class="legal-card" id="governing">
-                <span class="section-number">14</span>
-                <h2>Governing Law</h2>
-
-                <p>
-                    These Terms & Conditions shall be governed by
-                    the applicable laws of the jurisdiction in
-                    which the website operator is legally established,
-                    subject to mandatory consumer protection laws.
-                </p>
-            </article>
-
-
-            <article class="legal-card contact-legal" id="contact">
-                <span class="section-number">15</span>
-                <h2>Contact Information</h2>
-
-                <p>
-                    If you have any questions regarding these
-                    Terms & Conditions, please contact us.
-                </p>
-
-                <div class="contact-info">
-                    <div>
-                        <i class="fa-regular fa-envelope"></i>
-                        <span>your-email@example.com</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+1 (000) 000-0000</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Your Business Address</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- Footer Section -->
-<footer class="footer-sec">
-		<div class="container">
-			<div class="links-wrapper">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 mb-sm-4">
-						<a href="index.html" class="ft-logo"> <img src="./img/logo3.png" alt="logo"/> </a>
-					</div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="row product-links">
-                            <h6 class="fsz-18 mb-4"> Select A Product For Quote </h6>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="links-group mt-lg-0">
-                                    <ul class="links">
-                                        <li> <a href="lifeinsurancequote.html"> Life Insurance </a> </li>
-                                        <li> <a href="healthinsurancequote.html">  Health Insurance </a> </li>
-                                        <li> <a href="autoinsurancequote.html"> Auto Insurance </a> </li>
-                                        
-                                    </ul>
-						        </div>        
+                        <div class="sidebar-help">
+                            <div class="help-icon">
+                                <i class="fa-regular fa-circle-question"></i>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="links-group mt-lg-0">
-                                    <ul class="links">
-                                        <li> <a href="homeinsurancequote.html"> Home Insurance </a> </li>
-                                        <li> <a href="travelinsurancequote.html"> Travel Insurance </a> </li>
-                                        <li><a href="businessinsurancequote.html">Business Insurance</a></li>
-                                    </ul>
-						        </div>
+                            <h4>Need Assistance?</h4>
+                            <p>
+                                Have questions about our terms?
+                                Our team is here to help.
+                            </p>
+                            <a href="contact.html">
+                                Contact Us
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </aside>
+                </div>
+
+
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <div class="terms-content">
+
+
+                        <!-- 01 -->
+                        <div class="terms-item" id="introduction">
+                            <div class="terms-number">01</div>
+                            <h2>Introduction</h2>
+                            <p>
+                                By accessing or using this website, you agree
+                                to follow these Terms & Conditions and all
+                                applicable laws and regulations.
+                            </p>
+                            <p>
+                                Our platform is designed to help individuals,
+                                families, and businesses discover insurance
+                                information, explore service solutions, and
+                                connect with relevant providers.
+                            </p>
+                            <p>
+                                If you do not agree with these terms, please
+                                discontinue using our website.
+                            </p>
+                        </div>
+
+
+                        <!-- 02 -->
+                        <div class="terms-item" id="services">
+                            <div class="terms-number">02</div>
+                            <h2>About Our Services</h2>
+                            <p>
+                                We provide an online platform that makes
+                                discovering insurance information and
+                                essential services easier and more convenient.
+                            </p>
+
+                            <p>Our services include information and enquiry assistance for:</p>
+
+                            <ul class="terms-list">
+                                <li>Life Insurance</li>
+                                <li>Health Insurance</li>
+                                <li>Auto Insurance</li>
+                                <li>Home Insurance</li>
+                                <li>Travel Insurance</li>
+                                <li>Business Insurance</li>
+                                <li>Home Improvement Services</li>
+                            </ul>
+
+                            <p>
+                                Our home improvement services may include
+                                roofing, windows and doors, HVAC, kitchen and
+                                bathroom remodeling, flooring, solar
+                                installation, and other related projects.
+                            </p>
+                        </div>
+
+
+                        <!-- 03 -->
+                        <div class="terms-item" id="eligibility">
+                            <div class="terms-number">03</div>
+                            <h2>Eligibility</h2>
+                            <p>By using our website, you confirm that:</p>
+
+                            <ul class="terms-list">
+                                <li>You are at least 18 years old or have the required legal authorization.</li>
+                                <li>You have the legal capacity to accept these terms.</li>
+                                <li>All information you submit is accurate and complete.</li>
+                                <li>You will use our website only for lawful purposes.</li>
+                                <li>You will comply with applicable laws and regulations.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 04 -->
+                        <div class="terms-item" id="responsibilities">
+                            <div class="terms-number">04</div>
+                            <h2>User Responsibilities</h2>
+                            <p>When using our website, you agree to:</p>
+
+                            <ul class="terms-list">
+                                <li>Provide accurate and up-to-date information.</li>
+                                <li>Use the website for legitimate purposes.</li>
+                                <li>Keep your submitted contact information correct.</li>
+                                <li>Avoid submitting misleading or fraudulent enquiries.</li>
+                                <li>Respect the intellectual property rights of our website.</li>
+                                <li>Avoid activities that could disrupt website functionality.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 05 -->
+                        <div class="terms-item" id="insurance">
+                            <div class="terms-number">05</div>
+                            <h2>Insurance Information and Services</h2>
+                            <p>
+                                Our website provides general insurance-related
+                                information to help users understand available
+                                coverage options and financial protection solutions.
+                            </p>
+
+                            <ul class="terms-list">
+                                <li>Insurance information is provided for general informational purposes.</li>
+                                <li>Coverage, eligibility, premiums, and benefits depend on the relevant insurer.</li>
+                                <li>Policy terms, exclusions, and limitations vary by insurance product.</li>
+                                <li>We do not guarantee insurance approval or coverage.</li>
+                                <li>Users should carefully review official policy documents before purchasing insurance.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 06 -->
+                        <div class="terms-item" id="third-party">
+                            <div class="terms-number">06</div>
+                            <h2>Third-Party Providers and Services</h2>
+                            <p>
+                                Our website may connect users with independent
+                                insurance providers, agents, contractors, and
+                                other service professionals.
+                            </p>
+
+                            <ul class="terms-list">
+                                <li>Third-party providers operate independently of our platform.</li>
+                                <li>Their services, pricing, qualifications, and availability may vary.</li>
+                                <li>Any agreement entered into with a provider is between you and that provider.</li>
+                                <li>We are not responsible for independent providers' actions or contractual obligations.</li>
+                                <li>Users should independently verify provider credentials before proceeding.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 07 -->
+                        <div class="terms-item" id="quotes">
+                            <div class="terms-number">07</div>
+                            <h2>Quotes, Estimates and Enquiries</h2>
+                            <p>
+                                Our website may allow users to submit quote
+                                requests and service enquiries.
+                            </p>
+
+                            <ul class="terms-list">
+                                <li>A submitted request does not constitute a confirmed insurance policy or service agreement.</li>
+                                <li>Quotes and estimates may require additional information or verification.</li>
+                                <li>Final pricing and eligibility are determined by the relevant provider.</li>
+                                <li>Submitting an enquiry does not guarantee approval, coverage, or service availability.</li>
+                                <li>Providers may contact you regarding your submitted request, subject to applicable consent and privacy requirements.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 08 -->
+                        <div class="terms-item" id="intellectual">
+                            <div class="terms-number">08</div>
+                            <h2>Intellectual Property</h2>
+                            <p>
+                                All website materials, including text, graphics,
+                                logos, images, icons, designs, layouts, and
+                                other content, are owned by or licensed to
+                                the website operator unless otherwise stated.
+                            </p>
+
+                            <ul class="terms-list">
+                                <li>Copy or reproduce website content without permission.</li>
+                                <li>Distribute or commercially use our materials without authorization.</li>
+                                <li>Modify or republish website designs or content.</li>
+                                <li>Use our branding or intellectual property without written consent.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 09 -->
+                        <div class="terms-item" id="liability">
+                            <div class="terms-number">09</div>
+                            <h2>Limitation of Liability</h2>
+                            <p>
+                                To the extent permitted by applicable law,
+                                we shall not be responsible for:
+                            </p>
+
+                            <ul class="terms-list">
+                                <li>Errors or inaccuracies in general website information.</li>
+                                <li>Decisions made based on information available on our website.</li>
+                                <li>Actions, omissions, or services provided by third parties.</li>
+                                <li>Losses arising from third-party insurance products or service agreements.</li>
+                                <li>Temporary website interruptions or technical issues.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 10 -->
+                        <div class="terms-item" id="availability">
+                            <div class="terms-number">10</div>
+                            <h2>Website Availability and Modifications</h2>
+                            <p>
+                                We aim to maintain a reliable and accessible
+                                website experience. However, we do not
+                                guarantee uninterrupted or error-free access.
+                            </p>
+
+                            <p>We reserve the right to:</p>
+
+                            <ul class="terms-list">
+                                <li>Update website content and features.</li>
+                                <li>Modify or discontinue certain services.</li>
+                                <li>Perform maintenance and technical improvements.</li>
+                                <li>Restrict access when necessary for security or operational reasons.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 11 -->
+                        <div class="terms-item" id="privacy">
+                            <div class="terms-number">11</div>
+                            <h2>Privacy and Data Protection</h2>
+                            <p>
+                                Your privacy is important to us. Any personal
+                                information submitted through our website is
+                                handled in accordance with our Privacy Policy.
+                            </p>
+
+                            <p>Information may be used to:</p>
+
+                            <ul class="terms-list">
+                                <li>Respond to your enquiries.</li>
+                                <li>Process your service requests.</li>
+                                <li>Provide relevant information and assistance.</li>
+                                <li>Connect you with appropriate providers where applicable and authorized.</li>
+                                <li>Improve our website and services.</li>
+                            </ul>
+
+                            <p>
+                                Please review our
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                to understand how your information is collected,
+                                used, and shared.
+                            </p>
+                        </div>
+
+
+                        <!-- 12 -->
+                        <div class="terms-item" id="external">
+                            <div class="terms-number">12</div>
+                            <h2>External Links</h2>
+                            <p>
+                                Our website may contain links to third-party
+                                websites, resources, or service providers for
+                                additional information and convenience.
+                            </p>
+                            <p>
+                                These external websites operate independently
+                                and may have their own terms, policies, and
+                                practices. Visiting third-party websites is
+                                at your own discretion.
+                            </p>
+                        </div>
+
+
+                        <!-- 13 -->
+                        <div class="terms-item" id="changes">
+                            <div class="terms-number">13</div>
+                            <h2>Changes to These Terms</h2>
+                            <p>
+                                We reserve the right to update or revise
+                                these Terms & Conditions when necessary.
+                            </p>
+                            <p>
+                                Any changes will be published on this page
+                                along with an updated revision date.
+                                We encourage users to review this page
+                                periodically.
+                            </p>
+                        </div>
+
+
+                        <!-- 14 -->
+                        <div class="terms-item" id="governing">
+                            <div class="terms-number">14</div>
+                            <h2>Governing Law</h2>
+                            <p>
+                                These Terms & Conditions shall be governed
+                                by and interpreted in accordance with the
+                                laws of the jurisdiction in which the
+                                website operator is legally established,
+                                subject to applicable consumer protection
+                                and other mandatory legal requirements.
+                            </p>
+                        </div>
+
+
+                        <!-- 15 -->
+                        <div class="terms-item" id="contact">
+                            <div class="terms-number">15</div>
+                            <h2>Contact Information</h2>
+                            <p>
+                                If you have questions, concerns, or require
+                                additional information regarding these
+                                Terms & Conditions, please contact our team.
+                            </p>
+
+                            <div class="contact-info-box">
+                                <div class="contact-info-item">
+                                    <span><i class="fa-regular fa-envelope"></i></span>
+                                    <div>
+                                        <small>Email Address</small>
+                                        <p>your-email@example.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <span><i class="fa-solid fa-phone"></i></span>
+                                    <div>
+                                        <small>Phone Number</small>
+                                        <p>+1 (000) 000-0000</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <span><i class="fa-solid fa-location-dot"></i></span>
+                                    <div>
+                                        <small>Business Address</small>
+                                        <p>Your Registered Business Address</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-						
-					</div>
-					<div class="col-lg-2 col-md-6">
-						<div class="links-group mt-5 mt-lg-0">
-							<h6 class="fsz-18 mb-4"> More Service </h6>
-							<ul class="links">
-								<li> <a href="about.html"> About us </a> </li>
-								<li> <a href="privacy.html"> Privacy Policy </a> </li>
-								<!-- <li> <a href="contactus.html"> Contact us </a> </li> -->
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="links-group mt-5 mt-lg-0">
-							<h6 class="fsz-18 mb-4"> Address </h6>
-							<ul class="links">
-								<li> <a href="#"> 785 15h Street - Sydney Harbor <br> Bridge Circular City of Sydney,
-									</a> </li>
-								<li> <a href="#" class="opacity-100"> #India. </a> </li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="foot">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-12">
-						<div class="copy-right"> Built on intelligence. Driven by performance © Powered by <a href="#" class="cr-dark1"> Havmor Media </a>    </div>
-					</div>
-					<!-- <div class="col-lg-5">
-						<div class="foot-links text-lg-end mt-5 mt-lg-0">
-							<a href="faq.html"> FAQ's </a>
-							<a href="contactus.html"> Contact Us </a>
-						</div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-	</footer>
 
-     <script src="js/script.js"></script>
+
+                        <!-- Bottom Note -->
+                        <div class="terms-bottom-note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <p>
+                                By continuing to use our website, you
+                                acknowledge that you have read and
+                                understood these Terms & Conditions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Active Sidebar Navigation -->
+    
+
 </body>
 </html>
