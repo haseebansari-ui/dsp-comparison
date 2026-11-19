@@ -2159,7 +2159,7 @@ animation:float 4s ease infinite;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 280px;
 }
 
 .step-card:hover {
@@ -2239,6 +2239,7 @@ animation:float 4s ease infinite;
   padding: 40px 32px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  height: 305px;
 }
 
 .why-card:hover {
@@ -2282,6 +2283,10 @@ animation:float 4s ease infinite;
   color: #64748b;
   line-height: 1.6;
   margin: 0;
+}
+
+.why-icon-box span i{
+    font-size: 1.4rem;
 }
 
 /* ---- Home Insurance info content section ---- */
