@@ -199,7 +199,7 @@ header{
     z-index:1000;
     /* background:rgba(15,10,31,.92); */
     backdrop-filter:blur(18px);
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid rgb(204 204 204 / 49%);
 }
 .nav-container{
     display: flex;
@@ -3203,6 +3203,7 @@ html {
     font-size: 1.1rem;
     line-height: 1.7;
     color: var(--text-color);
+    list-style: disc;
 }
 
 .policy-card a {
